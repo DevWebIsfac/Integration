@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+}
+
+nav {
+	background-color: #555;
+}
+
+ul {
+	font-size: 0;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+/* Les sous-menus */
+ul ul {
+	/* Masquer un élément */
+	display: none;
+	position: absolute;
+}
+ul ul li {
+	display: block;	
+}
+ul ul li a {
+	text-align: left;
+}
+
+li {
+	display: inline-block;
+	vertical-align: top;
+	width: 240px;
+	font-size: 1rem;
+}
+
+a {
+	display: block;
+	padding: 8px 16px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	background-color: #555;
+	border-bottom: 3px solid #555;
+}
+
+a:hover {
+	background-color: #000;
+	border-color: #000;
+}
+a:active {
+	color: red;
+}
+
+li:hover ul {
+	display: block;
+}
+
+.active a {
+	border-bottom: 3px solid cyan;
+}

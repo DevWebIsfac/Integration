@@ -1,0 +1,563 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mémo CSS</title>
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    	<header class="header">
+        	<h1 class="header-title">Isfac - Développeur Logiciel 2017/2018</h1>
+        	<nav class="header-nav">
+        		<ul>
+        			<li><a href="index.html"><i class="fa fa-home"></i></a></li>
+        			<li><a href="memo-html.html">HTML</a></li>
+        			<li class="active"><a href="memo-css.html">CSS</a></li>
+        		</ul>
+        	</nav>
+        </header>
+        <div class="container">
+<h1>Mémo CSS</h1>
+
+<h2>Modèle de boîte, position et dimensions</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Propriété</th>
+			<th>Valeurs / Définition</th>
+			<th>Initiale</th>
+			<th class="tdCode">Exemple</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<strong>box-sizing</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>border-box</code>, <code>padding-box</code> ou <code>content-box</code>
+				<p>Change le mode de calcul du modèle de boîte</p>
+			</td>
+			<td><code>content-box</code></td>
+			<td class="tdCode"><pre><code class="css">box-sizing: border-box;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>position</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/position" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>none</code>
+				<p>Change le type de position</p>
+			</td>
+			<td><code>static</code></td>
+			<td class="tdCode"><pre><code class="css">position: fixed;
+top: 0;
+left: 20px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>left</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/left" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>top</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/top" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>right</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/right" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>bottom</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/bottom" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><a href="#def-longueur"><code>&lt;longueur&gt;</code></a></a>, <a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a>, <code>auto</code>
+				<p>
+					Si position <strong>relative</strong>, décalage avec la position normale.<br/>
+					Si position <strong>absolute</strong>, emplacement par rapport au premier parent ayant une position relative ou absolue. Si aucun parent n'est positionné, c'est le body qui sert de référence.<br/>
+					Sans effet si la position est <strong>static</strong></p>
+			</td>
+			<td><code>auto</code></td>
+			<td class="tdCode"><pre><code class="css">left: 40px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>display</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/display" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>none</code>, <code>block</code>, <code>inline</code>, <code>inline-block</code> &hellip;
+				<p>Change le type de display</p>
+			</td>
+			<td><code>inline</code></td>
+			<td class="tdCode"><pre><code class="css">display: none;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>z-index</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/z-index" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				Nombre entier positif ou négatif : <code>-1</code>, <code>0</code>,<code>2</code>, <code>30</code> &hellip;
+				<p>Gestion de la superposition (dessus/dessous)</p>
+			</td>
+			<td><code>auto</code></td>
+			<td class="tdCode"><pre><code class="css">z-index: 10;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>min-width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/min-width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>max-width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/max-width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><code>&lt;longueur&gt;</code></a>,<a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a>, <code>auto</code>
+				<p><strong>Largeur de l'élément</strong><br/>
+				minimale<br/>
+				maximale</p>
+			<td>
+				<code>auto</code><br/>
+				<code>0</code><br/>
+				<code>none</code>
+			</td>
+			<td class="tdCode"><pre><code class="css">width: 50%;
+min-width: 90px;
+max-width: 960px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>height</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/height" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>min-height</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/min-height" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>max-height</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/max-height" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><code>&lt;longueur&gt;</code></a>,<a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a>, <code>auto</code>
+				<p><strong>Hauteur de l'élément</strong><br/>
+				minimale<br/>
+				maximale</p>
+			<td>
+				<code>auto</code><br/>
+				<code>0</code><br/>
+				<code>none</code>
+			</td>
+			<td class="tdCode"><pre><code class="css">height: 500px;
+min-height: 90px;<br/>
+max-height: 400px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>overflow</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/overflow" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>auto</code>, <code>visible</code>, <code>hidden</code>, <code>scroll</code>
+				<p>Gestion des dépassemnts</p>
+			</td>
+			<td><code>visible</code></td>
+			<td class="tdCode"><pre><code class="css">overflow: hidden;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>margin</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/margin" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>margin-top</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/margin-top" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>margin-right</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/margin-right" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>margin-bottom</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/margin-bottom" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>margin-left</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/margin-left" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><code>&lt;longueur&gt;</code></a>, <a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a>, <code>auto</code>
+				<p>La propriété raccourcie <code>margin</code> accepte 1, 2, 3 ou 4 valeurs :<br/>
+				1 valeur : haut/droite/bas/gauche,<br/>
+				2 valeurs : haut/bas gauche/droite,<br/>
+				3 valeurs : haut droite/gauche bas,<br/>
+				4 valeurs : haut droite bas gauche</p>
+			</td>
+			<td><code>0</code></td>
+			<td class="tdCode"><pre><code class="css">margin: 10px;
+margin: 10px 20px;
+margin: 1em 2em 3em;
+margin: 1em 2em 10px 40px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>padding</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/padding" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>padding-top</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/padding-top" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>padding-right</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/padding-right" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>padding-bottom</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/padding-bottom" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>padding-left</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/padding-left" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><code>&lt;longueur&gt;</code></a>, <a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a>
+				<p>La propriété raccourcie <code>padding</code> accepte 1, 2, 3 ou 4 valeurs :<br/>
+				1 valeur : haut/droite/bas/gauche,<br/>
+				2 valeurs : haut/bas gauche/droite,<br/>
+				3 valeurs : haut droite/gauche bas,<br/>
+				4 valeurs : haut droite bas gauche</p>
+			</td>
+			<td><code>0</code></td>
+			<td class="tdCode"><pre><code class="css">padding: 10px;
+padding: 10px 20px;
+padding: 1em 2em 3em;
+padding: 1em 2em 10px 40px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>border-style</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-style" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-top-style</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-top-style" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-right-style</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-right-style" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-bottom-style</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-bottom-style" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-left-style</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-left-style" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>none</code>, <code>hidden</code>, <code>dotted</code>, <code>dashed</code>, <code>solid</code>, <code>double</code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>
+				<p>Style de bordure</p>
+			</td>
+			<td><code>none</code></td>
+			<td class="tdCode"><pre><code class="css">border-style: dotted;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>border-width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-top-width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-top-width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-right-width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-right-width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-bottom-width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-bottom-width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-left-width</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-left-width" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>medium</code>, <code>thin</code>, <code>thick</code>, <a href="#def-longueur"><code>&lt;longueur&gt;</code></a>
+				<p>Épaisseur de la bordure</p>				
+			</td>
+			<td><code>medium</code></td>
+			<td class="tdCode"><pre><code class="css">border-width: 3px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>border-color</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-color" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-top-color</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-top-color" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-right-color</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-right-color" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-bottom-color</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-bottom-color" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+				<strong>border-left-color</strong><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-left-color" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>&lt;couleur&gt;</code>
+				<p>Couleur de la bordure</p>
+			</td>
+			<td><code>#000</code></td>
+			<td class="tdCode"><pre><code class="css">border-color: red;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>border</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/border" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>&lt;border-width&gt; &lt;border-style&gt; &lt;border-color&gt;</code>
+				<p>Propriété raccourcie pour définir les bordures</p>
+			</td>
+			<td><code>none</code></td>
+			<td class="tdCode"><pre><code class="css">border: 2px dashed #dd3;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>border-radius</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-radius" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><code>&lt;longueur&gt;</code></a>, <a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a>
+				<p>Arrondi de bordure</p>
+			</td>
+			<td><code>0</code></td>
+			<td class="tdCode"><pre><code class="css">border-radius: 5px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>float</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/float" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>left</code>, <code>right</code>, <code>none</code>
+				<p>Définie un élément comme flottant</p>
+			</td>
+			<td><code>none</code></td>
+			<td class="tdCode"><pre><code class="css">float: left;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>clear</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/clear" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>left</code>, <code>right</code>, <code>none</code>
+				<p>Nettoye les flottants</p>
+			</td>
+			<td><code>none</code></td>
+			<td class="tdCode"><pre><code class="css">clear: both;</code></pre></td>
+	</tr>
+		<tr>
+			<td>
+				<strong>background-color</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-color" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>&lt;couleur&gt;</code>
+				<p>Couleur de l'arrière-plan</p>
+			</td>
+			<td><code>transparent</code></td>
+			<td class="tdCode"><pre><code class="css">background-color: rgba(0,0,0,0.2);</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>background-image</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-image" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>url("&lt;url_de_mon_fichier&gt;")</code>, <code>none</code>
+				<p>Image d'arrière plan (jpg, gif, png svg)</p>
+			<td><code>none</code></td>
+			<td class="tdCode"><pre><code class="css">background-image: url("paysage.jpg");</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>background-repeat</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>, <code>no-repeat</code>
+				<p>Mode de répétition de l'image d'arrière plan</p>
+			</td>
+			<td><code>repeat</code></td>
+			<td class="tdCode"><pre><code class="css">background-repeat: no-repeat;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>background-attachment</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-attachment" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>scroll</code>, <code>fixed</code>
+				<p>Comportement de l'image de fond lorsque l'on scroll</p>
+			</td>
+			<td><code>scroll</code></td>
+			<td class="tdCode"><pre><code class="css">background-attachment: fixed;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>background-position</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-position" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>top left</code>, <code>right bottom</code>, <code>Opx 50px</code>, <code>center</code>, <code>0% 0%</code>, &hellip;
+				<p>Position de l'image d'arrière plan</p>
+				</td>
+			<td><code>0% 0%</code></td>
+			<td class="tdCode"><pre><code class="css">background-position: bottom left;</code></pre></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Texte</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Propriété</th>
+			<th>Valeurs / Définition</th>
+			<th>Initiale</th>
+			<th>Exemple</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<strong>font-size</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-size" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><code>&lt;longueur&gt;</code></a>
+				<p>Taille d'écriture</p>
+			</td>
+			<td><code>medium</code></td>
+			<td class="tdCode"><pre><code class="css">font-size: 1.3em;
+top: 0;
+left: 20px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>font-weight</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-weight" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>, <code>100</code>, <code>300</code>, <code>400</code>, <code>600</code>, <code>700</code>
+				<p>Graisse de la police</p>
+			</td>
+			<td><code>normal</code></td>
+			<td class="tdCode"><pre><code class="css">font-weight: 300;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>font-style</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-style" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>normal</code>, <code>italic</code>
+				<p>Style de la police</p>
+			</td>
+			<td><code>normal</code></td>
+			<td class="tdCode"><pre><code class="css">font-style: italic;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>text-decoration</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-decoration" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>none</code>, <code>underline</code>, <code>line-through</code>
+				<p>Décoration (soulignement, barré)</p>
+			</td>
+			<td><code>none</code></td>
+			<td class="tdCode"><pre><code class="css">text-decoration: line-through;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>text-align</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-align" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code>
+				<p>Alignement horizontale du texte</p>
+			</td>
+			<td><code>left</code></td>
+			<td class="tdCode"><pre><code class="css">text-align: center;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>text-transform</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-transform" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>uppercase</code>, <code>lowercase</code>, <code>capitalize</code>
+				<p>Transforme le texte (majuscule, minuscule)</p>	
+			</td>
+			<td><code>none</code></td>
+			<td class="tdCode"><pre><code class="css">text-transform: uppercase;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>font-family</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-family" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>Arial, sans-serif;</code>, <code>Georgia, serif;</code> &hellip;
+				<p>Police d'écriture : une famille de police se terminant obligatoirement par une police générique (serif ou sans-serif)</p>
+			</td>
+			<td><code>sans-serif</code></td>
+			<td class="tdCode"><pre><code class="css">font-family: "Time New Roman", Georgia, serif;
+font-family: "Helvetica Neue", Roboto, Arial, sans-serif;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>line-height</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/line-height" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<a href="#def-longueur"><code>&lt;longueur&gt;</code></a>, <code>normal</code>
+				<p>Hauteur de ligne</p>
+			</td>
+			<td><code>normal</code></td>
+			<td class="tdCode"><pre><code class="css">line-height: 1.4em;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>letter-spacing</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/letter-spacing" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>normal</code>, <code>&lt;longueur positive ou négative&gt;</code> 
+				<p>Chasse (espacement des caractères)</p>
+			</td>
+			<td><code>normal</code></td>
+			<td class="tdCode"><pre><code class="css">letter-spacing: -2px;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>list-style-position</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/list-style-position" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>inside</code>, <code>outside</code>
+				<p>Position des puces d'une liste</p>
+			</td>
+			<td><code>outside</code></td>
+			<td class="tdCode"><pre><code class="css">list-style: inside;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>list-style-type</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/list-style-type" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<code>none</code>, <code>square</code>, <code>disc</code>, <code>lower-alpha</code>, <code>upper-alpha</code>, <code>lower-roman</code>, <code>upper-roman</code>
+				<p>Type d'élément de liste</p>
+			</td>
+			<td><code>disc</code></td>
+			<td class="tdCode"><pre><code class="css">list-style-type: square;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>white-space</code>
+					<a href="https://developer.mozilla.org/fr/docs/Web/CSS/strong>white-space</code>" target="_blank" title="Voir la documentatin sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+				</td>
+			<td>
+				<code>normal</code>, <code>nowrap</code>, <code>pre</code>
+				<p>Gestion de l'espace blanc</p>
+			</td>
+			<td><code>normal</code></td>
+			<td class="tdCode"><pre><code class="css">white-space: nowrap;</code></pre></td>
+		</tr>
+</table>
+
+<h2>Explications</h2>
+<ul>
+	<li id="def-longueur">
+		<code>&lt;longeur&gt;</code> :
+		<ul>
+			<li><code>&lt;longeur&gt;</code> doit être remplacé par une longueur absolue ou relative (px, em, rem, &hellip;).</li>
+			<li>Le nombre est immédiatement suivi de l'unité, sans espace. Par exemple <code>1.6em</code> et pas <code>1.6 em</code></li>
+			<li>La valeur 0 ne doit pas comporter d'unité</li>
+		</ul>
+	</li>
+	<li id="def-pourcentage">
+		<a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a> :
+		<ul>
+			<li><a href="#def-pourcentage"><code>&lt;pourcentage&gt;</code></a> doit être remplacé par un pourcentage.</li>
+			<li>Le nombre est immédiatement suivi de symbole <code>%</code>, sans espace. Par exemple <code>15%</code> et pas <code>15 %</code></li>
+			<li>La valeur 0 ne doit pas comporter d'unité</li>
+		</ul>
+	</li>
+</ul>
+	
+<h2>Syntaxe</h2>
+	
+	<pre><code class="css">selecteur {
+	propriété: valeur;
+	( propriété: valeur; ) /* Optionel */
+	( propriété: valeur; ) /* Optionel */
+}
+</code></pre>
+	
+	<h2>Exemple</h2>
+	
+	<pre><code class="css">/* Le code suivant stylise un lien sous la forme d'un bouton */
+a {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 2px solid teal;
+	color: teal;
+	text-decoration: none;
+}
+</code></pre>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

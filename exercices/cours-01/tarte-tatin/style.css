@@ -1,0 +1,42 @@
+/* Un commentaire CSS */
+
+/*
+Syntaxe CSS de base
+
+sélecteur {
+	propriété1: valeur1;
+	propriété2: valeur2;
+	etc...
+}
+
+*/
+
+/*
+Couleurs Hexadécimales :
+#000 = noir
+#fff = blanc
+*/
+
+body {
+	background-color: #000; /* Couleur de fond */
+	font-family: sans-serif; /* Changer la police d'écriture, par défaut "serif" */
+	color: #fff; /* Couleur du texte : nom de couleur (anglais), code hexadecimal (#333); */	
+}
+
+h1 {
+	background-color: #bada55;
+	color: #fff !important;
+	text-align: center;
+	/* !important empêche d'être overridée, à ne pas faire dans la vraie vie */
+
+	/* Les marges externes */
+	margin: 60px;
+	margin-bottom: 100px;
+
+	/* Les marges internes */
+	padding-top: 200px;
+}
+
+
+
+

@@ -1,0 +1,27 @@
+body {
+	
+}
+
+.element {
+	width: 150px;
+	height: 100px;
+	margin: 20px;
+	overflow: scroll; /* overflow pour gérer ce qui dépasse */
+	background-color: #faa;
+}
+
+#element-1 {
+	/*border-width: 10px;
+	border-style: solid;
+	border-color: #000;*/
+	border: 10px solid #000;
+}
+
+#element-2 {
+	padding: 30px;
+	border: 25px solid blue;
+}
+
+#element-3 {
+	padding: 50px 20px;
+}

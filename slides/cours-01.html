@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>DevWeb Cours n°1</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown data-background-color="#ffffff">
+					<textarea data-template>
+						![Fonctionnement du web](./img/isfac-logo.jpg)
+
+						## Formation Développeur Web
+
+						### ISFAC 2017/2018
+						Formateur : Manuel BALLAND
+
+						Cours n°1
+					</textarea>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Un peu d'Histoire
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 1989
+
+							<img src="./img/Berners-Lee_Tim.jpg" alt="Tim Berners-Lee" style="float: right;"/>
+
+							Tim Berners-Lee, informaticien au CERN (Centre Européen pour la Recherche Nucléaire) à Genève propose à son supérieur un projet de système de gestion de l'information nommé *World Wide Web*. Le but de se projet est de permettre aux nombreux scientifiques intervenant au CERN de pouvoir accéder à des documents
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 1990
+
+							Au CERN toujours, Tim Berners-Lee met au point le protocol HTTP (HyperText Transfer Protocol) et le langage HTML (HyperText Markup Language)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 1991
+
+							Le premier site web (hébergé sur l'ordinateur de Tim Berners-Lee au CERN) voit le jour.
+
+							Le site est toujours visible ici : <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">http://info.cern.ch/hypertext/WWW/TheProject.html</a>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 1993
+
+							Le CERN annonce que le World Wide Web pourra être utilisé par tout le monde sans restriction. Il fait passer le projet WWW dans le domaine public et publie son code source. Le web est désormais **accessible à tous et gratuit**.
+
+							Le premier navigateur grand public voit le jour, il s'appelle Netscape
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 1994
+
+							Création du W3C (World Wide Web Consortium) par Tim Berners-Lee pour « promouvoir la compatibilité des technologies du World Wide Web ». 
+
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Tout s'accélère
+
+							<ul style="font-size: 30px; text-align: left;">
+								<li class="fragment">1994 : Naissance de Yahoo</li>
+								<li class="fragment">1995 : création d'Amazon.com</li>
+								<li class="fragment">1995 : première version d'Internet Explorer sur Windows 95</li>
+								<li class="fragment">1998 : Google</li>
+								<li class="fragment">2001 : Wikipédia</li>
+								<li class="fragment">2004 : Firefox</li>
+								<li class="fragment">2004 : Thefacebook.com</li>
+								<li class="fragment">2005 : Youtube et le web 2.0</li>
+								<li class="fragment">2008 : Chrome</li>
+								<li class="fragment">2010 : HTML5</li>
+							</ul>
+						</textarea>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Fonctionnement du web
+
+							<p class="fragment">![Fonctionnement du web](./img/http.jpg)</p>
+						</textarea>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Les langages de développement web
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Le fond
+
+							HTML (HyperText Markup Language) : language de marquage hyper-texte
+
+							Permet de spécifier ce qui est un titre, un paragraphe, une image, un tableau, un lien, etc...			
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## La forme
+
+							CSS (Cascading Style Sheets) : feuilles de style en cascade
+
+							Permet de spécifier la couleur d'un titre, la taille d'un bouton, la police utilisée, etc...
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## L'interaction avec l'utilisateur
+							
+							JavaScript (JS)							
+						</textarea>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## De quoi ai-je besoin pour créer mon premier site web ?
+
+							<p class="fragment">De pas grand chose et tout est gratuit !<p>
+
+							- un éditeur de texte de base pré-installé est suffisant pour débuter : Bloc Notes (NotePad) sur Windows, TextEdit sur Mac <!-- .element: class="fragment" -->
+							- un navigateur web (chrome, firefox, opera, etc...) pour tester <!-- .element: class="fragment" -->
+							- une connexion internet n'est pas nécessaire pour développer un site web. <!-- .element: class="fragment" -->
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## C'est parti !
+						</textarea>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown data-background-color="#ffffff">
+						<textarea data-template>
+							## Création d'une première page web
+						</textarea>
+					</section>
+					<section data-background-color="#ffffff">
+						<h3>Exercice 1</h3>
+						<h4>Un fichier avec l'extension .HTML</h4>
+						<ul style="font-size: 30px;">
+						    <li class="fragment">Créez un répertoire nommé *Intégration*</li>
+							<li class="fragment">Dans ce répertoire, créez un répertoire nommé *01-Les-bases*</li>
+							<li class="fragment">Créez dans ce répertoire un fichier texte et renommez le *exercice-01.txt*</li>
+							<li class="fragment">Éditez ce fichier avec l'éditeur de texte de votre choix (choisissez un éditeur de texte brut, n'utilisez pas Word mais plutôt le bloc-note)</li>
+							<li class="fragment">Écrivez le texte *Hello World* et enregistrez le fichier</li>
+							<li class="fragment">Retournez dans l'explorateur de fichier, renommez ce fichier *exercice-01.html* et double-cliquez sur le fichier **exercice-01.html**</li>
+						</ul>
+					</section>
+					<section data-background-color="#ffffff">
+						<h3>Que constatez-vous ?</h3>
+						<ul style="font-size: 30px;">
+						    <li class="fragment">L'ordinateur ouvre le fichier automatiquement dans voter navigateur web par défaut (grâce à l'extension .html)</li>
+						    <li class="fragment">Le navigateur affiche une page blanche avec le texte "Hello World" en noir</li>
+						    <li class="fragment">L'onglet indique le nom du fichier</li>
+						    <li class="fragment">La barre d'adresse indique l'adresse locale du fichier</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown data-background-color="#ffffff">
+						<textarea data-template>
+							## Structure de base d'un fichier HTML
+							<ul style="font-size: 30px;">
+							    <li class="fragment">un **doctype** (prononcer *doctaïpe*), il précise au navigateur de quel type est le document</li>
+							    <li class="fragment">
+						    		une partie en-tête, le **head**, spécifiant :
+							    	<ul>
+							    		<li>le type d'encodage utilisé</li>
+							    		<li>le titre de la page</li>
+							    	</ul>
+							    <li class="fragment">une partie corps, le *body*, qui englobe le contenu de la page</li>
+							</ul>
+						</textarea>
+					</section>
+					<section data-background-color="#ffffff">
+						<h3>Exercice 2</h3>
+						<h4>Préparer un squelette réutilisable</h4>
+						<ul style="font-size: 30px;">
+							<li>Dans notre répertoire *01-Les-bases*, créer un nouveau fichier nommé *squelette-html5.html*</li>
+							<li>Éditez ce fichier avec le bloc-notes</li>
+							<li>Définissez le type de document html 5</li>
+							<li>Spécifiez que le fichier utilise la langue française</li>
+							<li>Créez une en-tête et un corp de document</li>
+							<li>Définissez l'encodage de caractère à utf-8'</li>
+							<li>Donner un titre à votre page</li>
+						</ul>
+					</section>
+					<section data-markdown data-background-color="#ffffff">
+						<textarea data-template>
+							<h3>Exercice 2</h3>
+							<h4>Corrigé</h4>
+							```
+							<!doctype html>
+							<html lang="fr">
+								<head>
+									<title>Titre de la page</title>
+									<meta charset="utf-8" />
+								</head>
+								<body>
+
+								</body>
+							</html>
+							```
+						</textarea>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Language HTML
+
+							Le HTML est un language structuré par des balises, elles ne sont pas visibles mais sont interpretées par le navigateur. 
+
+							Une balise se reconnait à la présence de chevrons `<` et `>`, comme ceci `<balise>`.
+
+							Il y a deux types de balises : les balises en paires et les balises orphelines.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Les balises en paires
+
+							Exemple de balise en paire :
+
+							```
+							<titre>ceci est un titre</titre>
+							```
+
+							Elle se compose comme ceci :
+							- la balise ouvrante `<titre>`
+							- le contenu de la balise « `ceci est un titre` »
+							- la balise fermante `</titre>`, similaire à la balise ouvrante mais avec un slash `/` entre le
+							premier chevron et le nom de la balise
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Les balises orphelines
+							
+							Exemple de balise orpheline : 
+
+							```
+							<image />
+							```
+
+							Pour la différencier, le slash (/) est entre le nom de la balise et le deuxième chevron.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Les attributs
+							
+							Les attributs sont des options de balises, ils s’insèrent après le nom de la balise ouvrante et -dans la plupart des cas- ont une valeur.
+							Ce qui donne pour une balise en paires :
+							
+							```
+							<balise attribut="valeur">contenu de la balise</balise>
+							```
+
+							Et pour une balise orpheline :
+
+							```
+							<image nom="photo.jpg" />
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Imbrication des balises
+							
+							Les balises doivent être fermées dans le sens inverse de leur ouverture (pensez à des poupées gigognes) :
+
+							- `<balise1><balise2></balise2></balise1>` est correct
+							- `<balise1><balise2></balise1></balise2>` est incorrect
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Indentation
+
+							Une bonne pratique consiste à indenter votre code (avec la touche TAB ou Espace) pour plus de
+							lisibilité et eviter de faire des erreurs dans l’ordre de fermetures des balises. Ce qui donne :
+							
+							```
+							<balise1>
+							      <balise2>
+										<balise3>
+							            </balise3>
+							      </balise2>
+							</balise1>
+							```
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Les bases du CSS
+
+							### 1. Le CSS inline
+
+							```
+							<h1 style="color: red;">Mon titre</h1>
+							```
+
+							### 2. Le CSS dans le head
+
+							```
+							<head>
+								<meta charset="utf-8" />
+								<title>Ma page</title>
+								<style>
+									/* Changer la couleur de fond de tous les titres de niveau 2 */
+									h2 {
+										background-color: #aaa;
+									}
+								</style>
+							</head>
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 3. Le CSS externe
+
+							Contenu du fichier `style.css`
+							```
+							body {
+								background-color: #000;
+								color: #fff;
+							}
+							```
+
+							Contenu du fichier html
+
+							```
+							<head>
+								<meta charset="utf-8" />
+								<title>Ma page</title>
+								<link rel="stylesheet" href="style.css">
+							</head>
+							```
+						</textarea>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

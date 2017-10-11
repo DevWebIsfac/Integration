@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>DevWeb Cours n°2</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<style>
+			.reveal table td, .reveal table th {
+				font-size: 18px;
+				text-align: left !important;
+			}
+			.reveal table td code{
+				color: #67e36e;
+				word-break: keep-all;
+			}
+		</style>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown data-background-color="#ffffff">
+					<textarea data-template>
+						![Logo Isfac](./img/isfac-logo.jpg)
+
+						## Formation Développeur Web
+
+						### ISFAC 2017/2018
+						Formateur : Manuel BALLAND
+
+						Cours n°2
+					</textarea>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## LE LANGUAGE CSS
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### La Syntaxe CSS
+
+							```
+							/* Un commentaire en CSS */
+							selecteur {
+								propriété1: valeur1;
+								propriété2: valeur2;
+							}
+							```
+
+							#### Exemple
+
+							```
+							/* On sélectionne les éléments de liste : li (list-item) */
+							li {
+								margin-left: 20px; /* marge externe à gauche de 20px */
+								color: gray; /* texte de couleur grise */
+							}
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Des sélecteurs plus précis
+
+							Sélection multiple (virgule)
+							```
+							/*
+							on sélectionne toutes les listes
+							ordonnées ou non : tous les les ul et ol
+							 */
+							ol, ul {
+								margin: 10px;
+								padding: 15px;
+								background-color: #dde;
+							}
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Sélection d'un descendant (espace)<br />
+							<small>un enfant direct</small>
+							```
+							/*
+							on sélectionne tous les liens
+							contenus dans les paragraphes : tous les a dans les p
+							*/
+							p a {
+								color: white;
+								background-color: orange;
+							}
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<small>et même d'un petit enfant</small>
+							```
+							/*
+							on sélectionne tous les liens
+							contenus dans des éléments de listes ordonnées :
+							tous les a dans des li, eux-mêmes dans des ol
+							*/
+							ol li a {
+								color: white;
+								background-color: orange;
+							}
+							```
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							Mais si je veux changer la marge du premier paragraphe seulement ?
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Il faut d'abord marquer cet élément comme si on lui collait une étiquette pour le différencier des autres.
+
+							Nous avons 2 possibilités :
+							- l'identifiant CSS : attribut id, <!-- .element: class="fragment" -->
+							- la class CSS : attribut class <!-- .element: class="fragment" -->
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Comment choisir entre `id` et `class` ?
+
+							- Un `id` est unique, on ne peut le trouver qu'une seule fois dans la page. C'est un critère de validité du W3C
+							- Une `class` peut être présente autant de fois que vous le voulez 
+							
+							Il est possible de créer des liens internes dans une page HTML. Pour identifier la cible de ce lien, on utilise un attribut `id`. Cela explique le fait qu'il ne doit y en avoir qu'un seul
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Reprenons notre exemple :
+
+							<small>Il faut d'abord marquer le paragraphe dans le code html :</small>
+							```
+							<body>
+								<p id="introduction">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, explicabo! Nemo quis quo ex, rem, facilis veritatis quam sit ullam maiores, mollitia possimus doloribus ipsam quos, ab amet est nam.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, explicabo! Nemo quis quo ex, rem, facilis veritatis quam sit ullam maiores, mollitia possimus doloribus ipsam quos, ab amet est nam.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, explicabo! Nemo quis quo ex, rem, facilis veritatis quam sit ullam maiores, mollitia possimus doloribus ipsam quos, ab amet est nam.
+								</p>
+							</body>
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Explications :
+
+							On utilise un `id` parce que :
+							- il n'y a qu'un seul premier paragraphe
+							- il pourrait être intéressant de faire un lien interne pour accéder directement à cette &laquo;introduction&raquo;
+							
+							La valeur de l'attribut `id` peut être ce que vous souhaitez, sous réserve de respecter quelques règles :
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template style="font-size: 27px;">
+
+							- pas d'espace
+							- pas de caractères spéciaux autre que le tiret (`-`) et le trait de soulignement (`_`) (*underscore*)
+							- le premier caractère ne peut être un chiffre
+							- les lettres peuvent être en minuscule ou en majuscule
+
+							<div style="font-size: 30px;">
+								<p>
+									<strong>Exemples de valeurs correctes :</strong><br />
+									`intro`, `INTRO`, `intro-chapitre`, `introChapitre`, 'chap_4_intro'
+								</p>
+
+								<p>
+									<strong>Exemples de valeurs incorrectes :</strong><br />
+									`0intro`, `intrô`, `2-presentation`
+								</p>
+							</div>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template style="font-size: 27px;">
+
+							Côté CSS
+
+							```
+							#introduction {
+								margin-left: 30px;
+								margin-bottom: 60px;
+								font-family: serif;
+							}
+							```
+							On sélectionne l'élément ayant comme id `introduction` grâce au symbole dièse `#`
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template style="font-size: 27px;">
+
+							## CLASS
+
+							HTML
+							```
+							<body>
+								<p class="introduction">lorem ipsum</p>
+							</body>
+							```
+
+							CSS
+							```
+							.introduction {
+								margin-left: 30px;
+								margin-bottom: 60px;
+								font-family: serif;
+							}
+							```
+							On sélectionne l'élément ayant comme class `introduction` grâce au symbole point `.`
+						</textarea>
+					</section>
+				</section>
+
+				<section data-markdown data-background-color="#ffffff">
+					<textarea data-template>
+						## Exercice 1
+					</textarea>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Découvrons de nouvelles propriétés CSS
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Mise en forme du texte
+
+							| Propriété        | Fonction           | Valeurs possibles  |
+							| ---------------- |:------------------:| ------------------:|
+							| `font-size`       | Taille du texte | 14px, 1.2em 0.9rem |
+							| `font-style`      | Changer le style du texte (mettre en italique par ex)      |   normal, italic, oblique |
+							| `font-weight`      | Changer la graisse du texte (mettre en gras par ex)      |   normal, bold, 100, 300 ... |
+							| `font-family`      | Changer la police de texte      |   serif, sans-serif ou une famille de polices |
+							| `line-height`      | Hauteur de ligne      |   24px, 1.6, 140% ... |
+							| `text-decoration`      | Décoration de texte (souligné, barré, etc...)      |   underline, none, line-through ... |
+							| `text-align`      | Changer l'alignement horizontal      |   left, right, center, justify |
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Les fond ou arrière-plan (`background`)
+
+							| Propriété        | Fonction           | Valeurs possibles  |
+							| ---------------- |:------------------:| ------------------:|
+							| `background-color`       | Couleur du fond | black, #aaa, rgb(0,0,20) ... |
+							| `background-image`      | Image de fond      |   `url('fichier.jpg')` |
+							| `background-repeat`      | Définie le type de répétition de l'image de fond      |   repeat, no-repeat, repeat-x, repeat-y |
+							| `background-position`      | Définie la position de l'image de fond      |   'top left', '25% 25%' ... |
+							| `background-attachment`      | Définie le comportement lors du scroll      |   scroll, fixed ... |
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Le modèle de boîte (*box model*)
+
+							| Propriété        | Fonction           | Valeurs possibles  |
+							| ---------------- |:------------------:| ------------------:|
+							| `width`       | Largeur | 200px, 50%, 8em ... |
+							| `height`       | Hauteur | *idem* |
+							| `margin-top`       | Marge externe en haut | '20px', 3em, 1rem ...  |
+							| `margin-right`       | Marge externe à droite | '20px', 3em, 1rem ...  |
+							| `margin-bottom`       | Marge externe en bas | '20px', 3em, 1rem ...  |
+							| `margin-left`       | Marge externe à droite | '20px', 3em, 1rem ...  |
+							| `margin`       | Marges externes | '20px', '20px 10px', '10px auto' ...  |
+							| `padding-top`       | Marge interne en haut | '20px', 3em, 1rem ...  |
+							| `padding-right`       | Marge interne à droite | '20px', 3em, 1rem ...  |
+							| `padding-bottom`       | Marge interne en bas | '20px', 3em, 1rem ...  |
+							| `padding-left`       | Marge interne à droite | '20px', 3em, 1rem ...  |
+							| `padding`       | Marges internes | idem |
+							| `border-width`       | Épaisseur de la bordure | 4px |
+							| `border-style`       | Style de la bordure | solid, dotted, dashed, double ... |
+							| `border-color`       | Couleur de la bordure | `<couleur>` |
+							| `border`       | Bordures | idem |
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Les balises HTML universelles
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							#### De type bloc
+							```
+							<div></div>
+							```
+
+							#### De type inline
+							```
+							<span></span>
+							```
+
+							Ces 2 balises permettent d’appliquer des class (ou id) pour définir des styles css, elles n'ont aucun effet lorsqu'elles sont utilisées seules.
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Le modèle de boîte
+
+							<div style="background-color: #fff;">
+								<img src="./img/css-box-model-standard.svg" alt="Modèle de boîte - schéma" style="max-width: 600px;">
+							</div>
+						</textarea>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+
+}
+
+/* span est la balise universelle de type inline */
+span {
+	background-color: yellow;
+}
+
+#menu {
+	background-color: #000;
+	color: #fff;
+	float: left;
+	margin: 20px;
+	padding: 20px;
+}
+
+#menu a {
+	color: #fff;
+}
+
+#menu a:hover {
+	color: #bada55;
+}
+/*#menu a:visited {
+	color: orange;
+}*/

@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mémo HTML</title>
+        
+        <link media="screen, print" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+        <link media="screen, print" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css">
+        <link media="screen, print" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link media="screen, print" rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    	<header class="header">
+        	<h1 class="header-title">Isfac - Développeur Logiciel 2017/2018</h1>
+        	<nav class="header-nav">
+        		<ul>
+        			<li><a href="index.html"><i class="fa fa-home"></i></a></li>
+        			<li class="active"><a href="memo-html.html">HTML</a></li>
+        			<li><a href="memo-css.html">CSS</a></li>
+        		</ul>
+        	</nav>
+        </header>
+        <div class="container">
+<h1>Mémo HTML</h1>
+
+<h2>Texte</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Balise</th>
+			<th>Définition et Attributs</th>
+			<th class="tdCode">Exemple</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<strong>a</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/a" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Hyperlien</strong>
+				<ul>
+					<li>
+						<code>href</code>: cible URL (absolue ou relative)<br/>
+						<strong>Valeurs possibles :</strong>
+						<ul>
+							<li>une url absolue : <code>href="http://developper.mozilla.org"</code></li>
+							<li>une url relative : <code>href="page-contact.html"</code></li>
+							<li>un fragment url : <code>href="#form"</code> qui enverra sur l'élément de la même page avec l'identifiant <code>id="form"</code></li>
+							<li>mailto avec adresse email : <code>href="mailto:john.doe@test.com"</code>. Le clic sur le lien ouvre le client de messagerie par défaut et prépare un nouveau message avec le destinataire pré-rempli.</li>
+						</ul>
+					</li>
+					<li>
+						<code>target</code> : définie où afficher la ressource. Par exemple <code>target="_blank"</code>, permet d'ouvrir le lien dans un nouvel onglet.
+					</li>
+				</ul>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;a href="newsletter.php" target="_blank"&gt;
+  Inscription newsletter
+&lt;/a&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>br</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/br" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Retour à la ligne</strong>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;p&gt;
+  Ceci est une première ligne&lt;br /&gt;
+  Ceci est une deuxième ligne
+&lt;/p&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>em</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/em" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Emphase : texte sur lequel on veut insister</strong>
+				<p>Par défaut, les navigateurs ont tendance à mettre le texte en italique</p>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;p&gt;Bien joué ! Votre réponse est &lt;em&gt;correcte&lt;/em&gt;&lt;/p&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>h1</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/h1" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+
+				<strong>h2</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/h2" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+
+				<strong>h3</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/h3" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+
+				<strong>h4</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/h4" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+
+				<strong>h5</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/h5" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a><br/>
+
+				<strong>h6</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/h6" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true">
+			</td>
+			<td>
+				<strong>Titres</strong>
+				<p>6 nouveaux de titre du plus important h1 au moins important h6</p>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;h1&gt;Mon titre très très important&lt;/h1&gt;
+&lt;h2&gt;Mon titre très important&lt;/h2&gt;
+&lt;h3&gt;Mon titre important&lt;/h3&gt;
+&lt;h4&gt;Mon titre&lt;/h4&gt;
+&lt;h5&gt;Mon titre peu important&lt;/h5&gt;
+&lt;h6&gt;Mon titre très peu important&lt;/h6&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>hr</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/hr" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Ligne horizontale représentant un changement de thématique.</strong>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;hr /&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>li</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/li" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Élément de liste (ordonnée ou non)</strong>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;ul&gt;
+  &lt;li&gt;html&lt;/li&gt;
+  &lt;li&gt;css&lt;/li&gt;
+  &lt;li&gt;js&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>p</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/p" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Paragraphe</strong>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;p&gt;Ceci est un paragraphe&lt;/p&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>ol</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ol" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Liste ordonnée</strong>
+				<p>En anglais <em>ordered list</em></p>
+				<p>Les enfants directs ne peuvent être que des <code>li</code></p>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;ol&gt;
+  &lt;li&gt;html&lt;/li&gt;
+  &lt;li&gt;css&lt;/li&gt;
+  &lt;li&gt;js&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>span</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/span" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Balise universelle de type <em>inline</em></strong>
+				
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;span&gt;toto&lt;/span&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>ul</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ul" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Liste non-ordonnée</strong>
+				<p>En anglais <em>unordered list</em></p>
+				<p>Les enfants directs ne peuvent être que des <code>li</code></p>
+			</td>
+			<td class="tdCode">
+<pre><code class="html">&lt;ul&gt;
+  &lt;li&gt;html&lt;/li&gt;
+  &lt;li&gt;css&lt;/li&gt;
+  &lt;li&gt;js&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Tableaux</h2>
+<ul>
+	<li>table</li>
+	<li>tr</li>
+	<li>thead</li>
+	<li>tbody</li>
+	<li>tfoot</li>
+	<li>th</li>
+	<li>td</li>
+</ul>
+
+<h2>Modèle de boîte, positionnement</h2>
+<ul>
+	<li>div</li>
+	<li>header</li>
+	<li>footer</li>
+	<li>aside</li>
+	<li>nav</li>
+	<li>main</li>
+</ul>
+
+<ul>
+	<li>img</li>
+</ul>
+
+<h2>Formulaires</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Balise</th>
+			<th>Définition et Attributs</th>
+			<th class="tdCode">Exemple</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<strong>form</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Form" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Formulaire</strong>
+				<ul>
+					<li>
+						<code>method</code> : définie la methode d'envoi du formulaire<br/>
+						<strong>Valeurs possibles :</strong> <code>action</code> | <code>post</code>
+					</li>
+					<li>
+						<code>action</code> : url du fichier à qui soumettre le formulaire<br/>
+						Valeurs possibles <code>&lt;url&gt;</code>
+					</li>
+				</ul>
+			</td>
+			<td class="tdCode"><pre><code class="html">&lt;form action="traitement.php" method="post"&gt;
+  &lt;!-- Placer tous les champs ici --&gt;
+&lt;/form&gt;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>input</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/input" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Champ de saisie</strong>
+				<ul>
+					<li>
+						<code>type</code> : définie le type de champ<br/>
+						<strong>Valeurs possibles :</strong> <code>button</code> | <code>checkbox</code> | <code>email</code> | <code>file</code> | <code>hidden</code> | <code>password</code> | <code>radio</code> | <code>tel</code> | <code>text</code>
+					</li>
+					<li>
+						<code>checked</code> : lorsque le champ est de type <code>checkbox</code> ou <code>radio</code>, permet de cocher la case à cocher ou l'option<br/>
+						<strong>Valeurs possibles :</strong> <code>checked</code>
+					</li>
+					<li>
+						<code>name</code> : nom de contrôle envoyé avec les données du formulaire<br/>
+						<strong>Valeur possible : </strong>une chaîne de caractère sans espace
+					</li>
+					<li>
+						<code>placeholder</code> : indication fournie à l'utilisateur pour saisir ses données. Par exemple, sur un champ texte, le placeholder remplira le champ par un texte grisé qui sert d'exemple à l'utilisateur
+					</li>
+				</ul>
+			</td>
+			<td class="tdCode"><pre><code class="html">&lt;input type="checkbox" name="newsletter" checked="checked" /&gt;
+&lt;input type="text" name="ville" placeholder="Saisissez le nom de votre ville de naissance" /&gt;</code></pre></td>
+		</tr>
+		<tr>
+			<td>
+				<strong>label</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/label" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Étiquette de libellé d'un champ de saisie</strong>
+				<ul>
+					<li><code>for</code> : identifiant <code>id</code> du champ correspondant</li>
+				</ul>
+			</td>
+			<td class="tdCode">
+				<pre><code class="html">&lt;!-- Sans attribut for, le champ doit être à l'intérieur --&gt;
+&lt;label&gt;
+  Prénom :
+  &lt;input type="text" name="prenom" /&gt;
+&lt;/label&gt;
+
+&lt;!-- Avec attribut for, le champ peut être à l'extérieur --&gt;
+&lt;label for="f_firstname"&gt;Prénom :&lt;/label&gt;
+&lt;input type="text" id="f_firstname" name="prenom" /&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>option</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/option" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Élément de contrôle d'un élément <code>select</code></strong>
+				<ul>
+					<li><code>disabled</code> : booleén qui indique si l'on peut sélectionner cette option</li>
+					<li><code>selected</code> : booleén qui indique si l'option est sélectionnée à l'état initial</li>
+					<li><code>value</code> : valeur que l'on souhaite envoyée au formulaire. Si non défini, c'est le contenu de la balise qui est envoyé</li>
+				</ul>
+			</td>
+			<td class="tdCode">
+				<pre><code class="html">&lt;!-- Sans attribut value, c'est le contenu (vert ou rouge) qui est envoyé --&gt;
+&lt;select name="couleur"&gt;
+  &lt;option&gt;vert&lt;/option&gt;
+  &lt;option&gt;rouge&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Avec attribut value, c'est lui (green ou red) qui est envoyé au formulaire --&gt;
+&lt;select name="couleur"&gt;
+  &lt;option value="green"&gt;vert&lt;/option&gt;
+  &lt;option value="red"&gt;rouge&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>select</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/select" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Liste déroulante d'options</strong>
+				<ul>
+					<li><code>disabled</code> : booléen indiquant si on peut intéragir avec la liste. Si non, elle apparait en grisé</li>
+					<li><code>multiple</code> : booléen indiquant si l'on peut choisir plusieurs options</li>
+					<li><code>name</code> : nom du contrôle qui permettra de récupérer les données côté traitement php</li>
+				</ul>
+			</td>
+			<td class="tdCode">
+				<pre><code class="html">&lt;select name="couleur" disabled="true"&gt;
+  &lt;option&gt;vert&lt;/option&gt;
+  &lt;option&gt;rouge&lt;/option&gt;
+  &lt;option&gt;orange&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>textarea</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/textarea" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Zone de texte multiligne</strong>
+				<ul>
+					<li><code>disabled</code> : booléen indiquant si on peut intéragir avec la liste. Si non, elle apparait en grisé</li>
+					<li><code>name</code> : nom du contrôle qui permettra de récupérer les données côté traitement php</li>
+					<li><code>placeholder</code> : texte indicatif affiché avant la saisie par l'utilisateur</li>
+				</ul>
+			</td>
+			<td class="tdCode">
+				<pre><code class="html">&lt;textarea name="message" placeholder="Écrivez votre message ici"&gt;<br/>&lt;/textarea&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>fieldset</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/fieldset" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Groupe de champs et labels au sein d'un formulaire</strong>
+				<ul>
+					<li><code>disabled</code> : booléen indiquant si on peut intéragir avec la liste. Si non, elle apparait en grisé</li>
+				</ul>
+				Le nom du groupe est déterminé par le premier élément enfant <code>legend</code>
+			</td>
+			<td class="tdCode">
+				<pre><code class="html">&lt;form action="index.php" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Identité&lt;/legend&gt;
+    &lt;input type="text" name="prenom" />&gt;
+    &lt;input type="text" name="nom" />&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>legend</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/legend" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Légende d'un élément fieldset</strong>
+			</td>
+			<td class="tdCode">
+				<pre><code class="html">&lt;!-- Voir exemple de `fieldset ci-dessus --&gt;</code></pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>optgroup</strong>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/optgroup" target="_blank" title="Voir la documentation sur MDN"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+			</td>
+			<td>
+				<strong>Groupe d'option dans un select</strong>
+				<ul>
+					<li><code>disabled</code> : booléen indiquant si on peut intéragir avec la liste. Si non, elle apparait en grisé</li>
+					<li><code>label</code> : nom du groupe d'option. Cet attribut est obligatoire</li>
+				</ul>
+			</td>
+			<td class="tdCode">
+				<pre><code class="html">&lt;select name="categorie"&gt;
+  &lt;optgroup label="Autos :"&gt;
+  	&lt;option&gt;Berline&lt;/option&gt;
+  	&lt;option&gt;Break&lt;/option&gt;
+  	&lt;option&gt;Monospace&lt;/option&gt;
+  	&lt;option&gt;Coupé / Cabriolet&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Motos :"&gt;
+  	&lt;option&gt;Routière&lt;/option&gt;
+  	&lt;option&gt;Tous terrains&lt;/option&gt;
+  	&lt;option&gt;Circuit&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

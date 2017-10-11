@@ -1,0 +1,48 @@
+body {
+	font-family: sans-serif;
+	margin-left: 100px;
+	padding-left: 280px;
+	margin-right: 100px;
+	line-height: 160%; /* le pourcentage se base sur la taille du texte de l'élément */
+	text-align: justify;
+
+	background-image: url('http://lorempicsum.com/futurama/255/200/2');
+	background-repeat: repeat-y;
+	/*background-position: top left;*/
+}
+
+#intro {
+	font-family: serif;
+	color: #bbb;
+	font-size: 20px;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+#menu {
+	float: left;
+	list-style-type: none;
+	background-color: #aaa;
+	padding: 35px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	font-weight: bold;
+}
+
+#menu a {
+	text-decoration: none;	
+}
+
+/*
+	Changer le style au survol (hover)
+	la partie :hover s'appelle pseudo-class;
+*/
+#menu a:hover {
+	color: orange;
+	text-decoration: underline;
+}
+
+em {
+	font-style: normal;
+	background-color: #bbb;
+}

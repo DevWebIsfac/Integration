@@ -1,0 +1,35 @@
+/* Reset CSS */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.element {
+	width: 50%;
+	padding: 20px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+/*
+Pour centrer horizontalement un élément,
+on applique des marges externes automatiques à gauche et à droite
+Attention : l'élément doit avoir une width spécifié;
+*/
+#element-2 {
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.carre {
+	width: 20%;
+	height: 200px;
+	background-color: #ccc;
+	border: 1px solid red;
+	float: left;
+}
+
+#carre-3 {
+	border-width: 10px;
+}

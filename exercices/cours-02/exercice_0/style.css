@@ -1,0 +1,24 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+#pomme {
+	color: green;
+}
+
+#poire {
+	color: lime;
+}
+
+#abricot {
+	color: orange;
+}
+
+#banane {
+	color: yellow;
+}
+
+.fruit-vert {
+	margin-left: 40px;
+}

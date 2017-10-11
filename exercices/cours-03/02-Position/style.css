@@ -1,0 +1,40 @@
+body {
+	height: 1000px;
+}
+
+.element {
+	width: 25%;
+	height: 100px;
+	margin: 20px;
+	overflow: scroll; /* overflow pour gérer ce qui dépasse */
+	background-color: #faa;
+}
+
+#element-1 {
+	/*border-width: 10px;
+	border-style: solid;
+	border-color: #000;*/
+	border: 10px solid #000;
+}
+
+#element-2 {
+	/*
+	relatif : par rapport à sa position normal, reste dans le flux;
+
+	absolu : par rapport au premier
+	parent qui a une position de spécifiée, l'élément sort du flux
+
+	fixed
+	*/
+	position: relative;
+	top: 60px;
+	left: 60px;
+	padding: 30px;
+	border: 25px solid blue;
+}
+
+#element-3 {
+	position: relative;
+	z-index: 1;
+	padding: 50px 20px;
+}
