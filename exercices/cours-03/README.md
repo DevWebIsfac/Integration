@@ -1,5 +1,9 @@
 # Cours 03 - Modèle de boîte et positionnement CSS
 
+## Présentation
+
+Les slides sont disponible à <a href="https://devwebisfac.github.io/Integration/slides/cours-03.html" target="_blank">cette adresse
+
 - Exercice 1 : **dimensions et modèle de boîte**
     + width,
     + height,

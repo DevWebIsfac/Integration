@@ -2,7 +2,7 @@
 
 ## Présentation
 
-Les slides sont disponible à <a href="https://devwebisfac.github.io/Integration-02-CSS/" target="_blank">cette adresse
+Les slides sont disponible à <a href="https://devwebisfac.github.io/Integration/slides/cours-02.html" target="_blank">cette adresse
 
 ## Exercices
 

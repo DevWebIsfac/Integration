@@ -2,7 +2,7 @@
 
 ### La présentation
 
-Vous pouvez consultez les slides de la présentation à cette adresse <a href="https://devwebisfac.github.io/Integration-01-Les-bases/" target="_blank">https://devwebisfac.github.io/Integration-01-Les-bases/</a>
+Vous pouvez consultez les slides de la présentation à cette adresse <a href="https://devwebisfac.github.io/Integration/slides/cours-01.html" target="_blank">https://devwebisfac.github.io/Integration/slides/cours-01.html</a>
 
 ### Notions abordées lors du cours
 
