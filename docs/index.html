@@ -117,12 +117,12 @@
 					<li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN web docs</a> (FR)</li>
 					<li><a href="https://www.w3schools.com/" target="_blank">w3school</a> (EN)</li>
 					<li><a href="https://www.w3.org/TR/html5/" target="_blank">Documentation officiel du W3C sur le HTML 5</a> (EN)</li>
+					<li><a href="http://devdocs.io/" target="_blank">DevDocs</a> (EN)</li>
 				</ul>
 
 				<h3>Outils</h3>
 				<ul>
 					<li><a href="https://codepen.io/" target="_blank">Codepen</a></li>
-					<li><a href="" target="_blank"></a></li>
 				</ul>
 
 				<h3>Tutos</h3>
@@ -132,8 +132,16 @@
 			</section>
 		</div>
 
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
+		<script>
+			jQuery(document).ready(function($) {
+				console.log("Bonjour");
+				$('.card').matchHeight();
+			});
+		</script>
     </body>
 </html>
