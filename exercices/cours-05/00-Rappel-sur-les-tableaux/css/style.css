@@ -1,0 +1,25 @@
+body {
+	background-color: #ddd;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 30px;
+}
+
+th, td {
+	border: 1px solid #000;
+	padding: 10px;
+	background-color: #fff;
+	text-align: center;
+}
+
+th {
+	background-color: #aaa;
+}
+
+.th-empty {
+	background-color: transparent;
+	border-left: none;
+	border-top: none;
+}

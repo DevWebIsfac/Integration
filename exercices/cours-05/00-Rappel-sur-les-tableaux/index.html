@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>00 - Rappel sur les tableaux</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Rappel sur les tableaux</h1>
+
+        <ul>
+        	<li>Balise <code>&lt;table&gt;</code></li>
+        	<li>Balise <code>&lt;tr&gt;</code> pour les lignes</li>
+        	<li>Balise <code>&lt;th&gt;</code> pour les cellules d'en-tête</li>
+        	<li>Balise <code>&lt;td&gt;</code> pour les cellules de données</li>
+        </ul>
+
+        <h2>Nouveauté : Fusion de cellule</h2>
+
+        <ul>
+        	<li>Fusion horizontale (entre colonnes) avec l'attribut <code>colspan</code></li>
+        	<li>Fusion verticale (entre lignes/rangées) avec l'attribut <code>rowspan</code></li>
+        </ul>
+
+		<table>
+			<tr>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+			</tr>
+			<tr>
+				<td colspan="2">1 et 2</td>
+				<td>3</td>
+				<td rowspan="2">4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td colspan="2" rowspan="2">X</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			
+		</table>
+
+		<p>&amp; = éperluette, esperluette, ET commercial, ampersand en anglais</p>
+
+		<table>
+			<tr>
+				<th class="th-empty">&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+    </body>
+</html>
