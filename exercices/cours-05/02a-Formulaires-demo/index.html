@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formualaires - démo</title>
+    </head>
+    <body>
+		<h1>Formulaires</h1>
+
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Identité</legend>
+				Nom : <input type="text" name="name" /><br />
+				Email : <input type="email" name="email" /><br />
+				Tel : <input type="tel" name="tel" disabled="disabled"><br />
+				Mot de passe : <input type="password" name="mdp" /><br/>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Autres</legend>
+				Votre date de naissance : <input type="text" name="bd" placeholder="jj/mm/aaaa" /><br />
+			
+			<input type="checkbox" name="news" /> Recevoir notre newsletter<br />
+			
+			Genre :<br />
+			<input type="radio" name="my-radio" value="male"> Homme<br />
+			<input type="radio" name="my-radio" value="female"> Femme<br />
+			
+			Genre <br />
+			<select name="genre">
+				<option disabled="disabled" selected="selected">Choisissez...</option>
+				<option>Homme</option>
+				<option>Femme</option>
+			</select><br />
+			
+			Message :<br />
+			<textarea name="message" rows="5"></textarea><br />
+			
+			<label>Autres informations : <input type="text" name="infos"></label><br/>
+			<label>Newsletter : <input type="checkbox" name="news2" /></label><br />
+			
+			<label for="infos2">Autres informations :</label>
+			<input type="text" name="infos2" id="infos2"><br/>
+			</fieldset>
+			
+			<input type="hidden" name="provenance" value="site" />
+			
+			<select name="prenom">
+				<option disabled="disabled" selected="selected">Choisissez</option>
+
+				<optgroup label="Prénoms féminins">
+					<option value="celine">Céline</option>	
+					<option value="julie">Julie</option>
+				</optgroup>
+				<optgroup label="Prénoms masculins">
+					<option value="norbert">Norbert</option>
+					<option value="jacques">Jacques</option>
+				</optgroup>
+				
+			</select>
+			
+			<input type="submit" />
+		</form>
+    </body>
+</html>
