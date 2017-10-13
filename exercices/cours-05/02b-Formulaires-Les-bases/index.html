@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Les formulaires HTML - Les bases</title>
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="forms.css">
+    </head>
+    <body>
+        <h1>Formulaires HTML - Les bases</h1>
+
+		<h3>Exercice 1</h3>
+		
+		<section>
+			<form action="#" method="post">
+	        	<label for="name1">Nom :</label><input type="text" name="name" id="name1" /><br />
+	        	<label for="firstname1">Prénom :</label><input type="text" name="firstname" id="firstname1" /><br />
+	        	<label for="message1">Message :</label><textarea name="message" id="message1"></textarea><br />
+	        	<input type="submit" />
+	        </form>
+		</section>
+
+		<h3>Exercice 2</h3>
+
+		<section>
+			<form action="#" method="post">
+	        	<label for="name"><span>*</span>Nom :</label>
+	        	<input type="text" name="name" id="name" required="required" placeholder="Saisissez votre nom ici" /><br />
+
+	        	<label for="firstname"><span>*</span>Prénom :</label>
+        		<input type="text" name="firstname" id="firstname" required="required" placeholder="Saisissez votre prénom ici" /><br />
+
+        		<input type="radio" name="genre" id="genreM" value="male" />
+        		<label for="genreM">Homme</label>
+        		<input type="radio" name="genre" id="genreF" value="female" />
+        		<label for="genreF">Femme</label><br />
+
+	        	<label for="message">Message :</label><br />
+	        	<textarea name="message" id="message"></textarea><br />
+
+	        	<input type="checkbox" checked="checked" name="newsletter" id="newsletter" />
+	        	<label for="newsletter">Je souhaite recevoir des informations occasionnelles</label><br />
+
+	        	<label for="comment">Comment nous avez-vous connu ?</label><br />
+	        	<select name="comment" id="comment">
+	        		<option disabled="disabled" selected="selected">Choisissez...</option>
+	        		<option>Bouche à oreille</option>
+	        		<option>Moteurs de recherche</option>
+	        		<option>Publicité radio</option>
+	        	</select><br />
+	        	
+	        	<input type="submit" value="Envoyer" />
+	        </form>
+		</section>
+
+		<h3>Exercice 3</h3>
+
+		<section>
+			<form action="#" method="post">
+				<fieldset>
+					<legend>Expérience professionnelle</legend>
+
+					<label for="poste">Poste actuel :</label>
+					<input type="text" name="poste" id="poste" />
+
+					<label>Nombre d'années d'expérience :</label><br />
+					<label for="exp0">0</label> <input type="radio" id="exp0" name="exp" /><br />
+					<label for="exp1">1-2</label> <input type="radio" id="exp1" name="exp" /><br />
+					<label for="exp2">3-5</label> <input type="radio" id="exp2" name="exp" /><br />
+					<label for="exp3">5-10</label> <input type="radio" id="exp3" name="exp" /><br />
+					<label for="exp4">+ de 10</label> <input type="radio" id="exp4" name="exp" />
+				</fieldset>
+				<fieldset>
+					<legend>Études & Diplômes</legend>
+
+					<label>Diplôme :</label><br />
+					<label for="dip0">Brevet</label> <input type="radio" id="dip0" name="dip" /><br />
+					<label for="dip1">Bac</label> <input type="radio" id="dip1" name="dip" /><br />
+					<label for="dip2">Bac+2</label> <input type="radio" id="dip2" name="dip" /><br />
+					<label for="dip3">Bac+3</label> <input type="radio" id="dip3" name="dip" /><br />
+					<label for="dip4">Bac+4</label> <input type="radio" id="dip4" name="dip" />
+					<label for="dip5">Bac+5</label> <input type="radio" id="dip5" name="dip" /><br /><br />
+
+					<label>Langues parlées et écrites :</label><br />
+					<input type="checkbox" name="fr" id="fr" checked="checked" />
+					<label for="fr">Français</label><br/>
+					<input type="checkbox" name="en" id="en"/>
+					<label for="en">Anglais</label><br/>
+					<input type="checkbox" name="es" id="es"/>
+					<label for="es">Espagnol</label><br/>
+					<input type="checkbox" name="de" id="de"/>
+					<label for="de">Allemand</label><br/>
+				</fieldset>
+
+				<label for="dep">Votre département :</label>
+				<select name="dep" id="dep">
+					<option disabled="disabled" selected="selected">Faîtes un choix...</option>
+					<optgroup label="Aquitaine">
+						<option>Dordogne (24)</option>
+						<option>Gironde (33)</option>
+						<option>Landes (40)</option>
+						<option>Lot et Garonne (47)</option>
+						<option>Pyrennées Atlantique (64)</option>
+					</optgroup>
+					<optgroup label="Limousin">
+						<option>Corrèze (19)</option>
+						<option>Creuse (23)</option>
+						<option>Haute Vienne (87)</option>
+					</optgroup>
+					<optgroup label="Poitou-Charentes">
+						<option>Charente (16)</option>
+						<option>Charente Maritime (17)</option>
+						<option>Deux Sèvres (79)</option>
+						<option>Vienne (86)</option>
+					</optgroup>
+				</select><br />
+
+				<input type="submit" value="Envoyer la candidature" />
+			</form>
+		</section>
+    </body>
+</html>

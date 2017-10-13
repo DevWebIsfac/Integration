@@ -24,3 +24,38 @@ th.repas {
 	color: #fff;
 	background-color: #000;
 }
+
+.tab-ex3 {
+	border: 1px solid #fff;
+	box-shadow: none;
+}
+
+.tab-ex3 th, .tab-ex3 td {
+	min-width: 60px;
+	border: 1px solid #fff;
+	text-transform: capitalize;
+	font-size: 14px;
+	text-align: left;
+}
+
+.tab-ex3 tr td {
+	background-color: #e6f1f4;
+}
+
+.tab-ex3 tr:nth-child(2n) td {
+	background-color: #f8fbfc;
+}
+
+.tab-ex3 tr th {
+	background-color: #3389a3;
+}
+
+.tab-ex3 tr.highlight2 td, .tab-ex3 tr td.highlight2 {
+	background-color: #ecfcd4;
+}
+
+.tab-ex3 tr.highlight1 td, .tab-ex3 tr td.highlight1 {
+	background-color: #bce874;
+}
+
+

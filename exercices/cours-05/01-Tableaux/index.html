@@ -22,7 +22,7 @@
 				color: #fff;
 			}
 			.consignes {
-				/*max-width: 640px;*/
+				max-width: 640px;
 				flex-basis: 50%;
 				margin-right: 40px;
 				padding: 1rem 2rem;
@@ -35,11 +35,17 @@
 				flex-basis: 50%;
         	}
         	.flex-container {
-        		display: flex;
-        		flex-grow: 1;
+        		display: block;
         	}
         	.flex-container .flex-container {
 				flex-direction: column;
+        	}
+
+        	@media screen and (min-width: 840px){
+        		.flex-container {
+        			display: flex;
+        			flex-grow: 1;
+        		}
         	}
 
         </style>
@@ -155,6 +161,63 @@
 				</div>
 			</div>
 
+		</div>
+
+		<div>
+			<h3>Exercice 3</h3>
+
+			<table class="tab-ex3">
+				<thead>
+					<th>Title</th>
+					<th>Title</th>
+					<th>Title</th>
+					<th>Title</th>
+					<th>Title</th>
+					<th>Title</th>
+				</thead>
+				<tbody>
+					<tr class="highlight1">
+						<td>Data</td>
+						<td class="highlight1">Data</td>
+						<td class="highlight2">Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+					</tr>
+					<tr>
+						<td>Data</td>
+						<td class="highlight1">Data</td>
+						<td class="highlight2">Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+					</tr>
+					<tr>
+						<td>Data</td>
+						<td class="highlight1">Data</td>
+						<td class="highlight2">Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+					</tr>
+					<tr class="highlight2">
+						<td>Data</td>
+						<td class="highlight1">Data</td>
+						<td class="highlight2">Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+					</tr>
+					<tr>
+						<td>Data</td>
+						<td class="highlight1">Data</td>
+						<td class="highlight2">Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
     </body>
