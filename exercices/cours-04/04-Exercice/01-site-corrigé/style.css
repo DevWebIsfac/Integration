@@ -9,10 +9,6 @@ body {
 	color: #575756;
 }
 
-img {
-	max-width: 100%;
-}
-
 /*.container {*/
 #page {
 	max-width: 960px;
@@ -60,7 +56,6 @@ header nav li {
 	display: inline-block;;
 	font-size: 1rem;
 	width: 240px;
-	max-width: 33.3333%;
 	border-left: 1px solid #6E7556;
 }
 
@@ -253,51 +248,4 @@ input[type="submit"] {
 
 #cp {
 	width: 80px;
-}
-
-@media screen and (max-width: 768px){
-	.accueil article {
-		margin: 60px 60px 0;		
-	}
-
-	aside {
-		width: 100%;
-		margin-bottom: 40px;
-	}
-
-	main {
-		margin-left: 0;
-	}
-}
-@media screen and (max-width: 640px){
-	body {
-		font-size: 14px;
-	}
-	label {
-		width: 100%;
-	}
-	input, textarea {
-		width: 100%;
-	}
-	.form-no-prelabel {
-		margin-left: 0;
-	}
-	main {
-		padding: 20px;
-	}
-	.accueil article {
-		margin-left: 20px;
-	}
-	.f-right {
-		float: none;
-		display: inline-block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.footer-coordonnees {
-		text-align: center;
-	}
-	.footer-coordonnees .logo {
-		margin-right: 0;
-	}
 }
