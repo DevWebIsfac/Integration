@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("img/fond-page.png");
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+header {
+	color: #fff;
+	background-color: #6E7556;
+	text-align: center;
+}
+
+header nav {
+	background-color: #9FB627;
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 0;
+	text-align: center; /* permet de centrer les textes, mais aussi les inline-block */
+}
+
+header nav li {
+	display: inline-block;
+	border-right: 1px solid #000;
+	font-size: 1rem;
+}
+
+header nav li:first-child {
+	border-left: 1px solid #000;
+}
+
+
+/*
+	Pour centrer verticalement UNE ligne de texte dans une hauteur connue :
+	line-height: hauteur
+*/
+header nav li a {
+	display: block;
+	width: 240px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #90A624;
+}
+header nav li a:hover {
+	background-color: #798b1c;
+}
+
+header nav li.active a {
+	color: #6E7556;
+	background-color: #fff;
+}
+
+footer {
+	color: #fff;
+	background-color: #6E7556;
+}
+
+.footer-coordonnees {
+	padding: 20px;
+}
+
+.footer-coordonnees .coordonnees-title {
+	font-weight: bold;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.footer-coordonnees .logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 60px;
+}
+.footer-coordonnees .coordonnees-content {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer-credits {
+	padding: 8px 16px;
+	text-align: center;
+	color: #9FB627;
+	background-color: #000;
+}
+
+.form-input {
+	margin-bottom: 8px;
+	font-size: 0;
+}
+
+.form-input.no-label {
+	margin-left: 25%;
+}
+.form-input label {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	font-size: 1rem;
+}
+.form-input input, .form-input textarea {
+	width: 75%;
+}
+.form-input input[type="submit"], .form-input input[type="checkbox"] {
+	width: auto;
+}
