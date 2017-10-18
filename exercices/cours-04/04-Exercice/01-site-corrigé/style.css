@@ -1,0 +1,303 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	color: #575756;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*.container {*/
+#page {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+header {
+	position: relative;
+	padding-top: 25px;
+	/*height: 230px;*/
+	background-color: #6E7556;
+}
+
+header h1 {
+	margin: 0;
+}
+header h1 a{
+	display: block;
+	width: 244px;
+	height: 142px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: url('img/logo-header.png');
+}
+
+header nav {
+	/*position: absolute;
+	bottom: 0;*/
+	margin-top: 13px;
+	width: 100%;
+	background-color: #9FB627;
+	text-align: center;
+}
+header nav ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	list-style-type: none;
+	border-left: 1px solid #6E7556;
+	border-right: 1px solid #6E7556;
+}
+
+header nav li {
+	display: inline-block;;
+	font-size: 1rem;
+	width: 240px;
+	max-width: 33.3333%;
+	border-left: 1px solid #6E7556;
+}
+
+header nav li:first-child{
+	border-left: none;
+}
+
+header nav li a {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #92a826;
+}
+
+header nav li a:hover {
+	background-color: #7c8f20;
+}
+
+header nav li.active a {
+	background-color: #fff;
+	color: #6E7556;
+}
+
+footer {
+	color: #fff;
+	background-color: #6E7556;
+}
+
+.footer-coordonnees {
+	padding: 20px;
+}
+
+.footer-coordonnees .logo, .coordonnees-content {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer-coordonnees .logo {
+	margin-right: 20px;
+}
+
+.coordonnees-title {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.footer-credits {
+	background-color: #352727;
+	text-align: center;
+	padding: 8px 0;
+}
+
+article {
+	font-size: 16px;
+	line-height: 28px;
+}
+.accueil article {
+	margin: 60px 90px 0 330px;
+	padding-bottom: 60px;
+}
+
+article h2 {
+	font-size: 28px;
+	color: #9FB627;
+}
+
+.f-right {
+	float: right;
+	margin-left: 20px;
+	max-width: 35%;
+}
+
+aside {
+	float: left;
+	width: 240px;
+	background-color: #EBEBEB;
+	line-height: 24px;
+}
+
+aside .contacts {
+	padding: 20px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+aside .nav-title {
+	font-weight: bold;
+}
+
+aside nav {
+	padding: 20px;
+}
+
+aside nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+aside nav a {
+	text-decoration: none;
+}
+aside nav a:hover {
+	text-decoration: underline;
+}
+
+main {
+	margin-left: 240px;
+	padding: 30px 60px;
+}
+#page {
+	background: url('img/fond-page.png') no-repeat bottom left;
+}
+.accueil main {
+	margin-left: 0;
+	padding: 0;
+}
+
+.more {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 20px;
+	background-color: #d1cece;
+}
+.more-title {
+	font-weight: bold;
+	color: #fff;
+}
+
+.form-input {
+	padding: 4px 0;
+	font-size: 0;
+}
+label {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	line-height: 28px;
+	font-size: 1rem;
+}
+.form-no-prelabel {
+	margin-left: 25%;
+}
+.form-no-prelabel label {
+	width: auto;
+	line-height: inherit;
+}
+
+input[type="text"], input[type="email"] {
+	height: 28px;
+	padding: 0 8px;
+	line-height: 28px;
+	border: 1px solid #333;
+}
+
+input, textarea {
+	width: 75%;
+}
+
+.required label {
+	position: relative;
+}
+.required label:before {
+	position: absolute;
+	left: -10px;
+	content: "*";
+	display: inline-block;
+	margin-right: 8px;
+	color: red;
+}
+
+textarea {
+	border: 1px solid #333;
+}
+input[type="submit"], input[type="checkbox"]{
+	width: auto;
+}
+
+input[type="submit"] {
+	margin-top: 24px;
+	background-color: #9FB627;
+	border: none;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+#cp {
+	width: 80px;
+}
+
+@media screen and (max-width: 768px){
+	.accueil article {
+		margin: 60px 60px 0;		
+	}
+
+	aside {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	main {
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 640px){
+	body {
+		font-size: 14px;
+	}
+	label {
+		width: 100%;
+	}
+	input, textarea {
+		width: 100%;
+	}
+	.form-no-prelabel {
+		margin-left: 0;
+	}
+	main {
+		padding: 20px;
+	}
+	.accueil article {
+		margin-left: 20px;
+	}
+	.f-right {
+		float: none;
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.footer-coordonnees {
+		text-align: center;
+	}
+	.footer-coordonnees .logo {
+		margin-right: 0;
+	}
+}

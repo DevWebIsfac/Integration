@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Nature et Web</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="contact">
+    	<div class="container">
+    		<header>
+    			<h1><a href="index.html">Contact Nature & Web</a></h1>
+	        	<nav>
+	        		<ul>
+	        			<li><a href="index.html">Accueil</a></li>
+	        			<li><a href="prestations.html">Prestations</a></li>
+	        			<li class="active"><a href="contact.html">Contact</a></li>
+	        		</ul>
+	        	</nav>
+	        </header>
+	        <div id="page">
+	        	<aside>
+		        	<div class="contacts">
+		        		NATURE&WEB<br/>
+		        		127, avenue des Champs<br/>
+						86000 POITIERS<br/>
+						Tél : 05 49 01 02 03<br/>
+						Fax : 05 49 01 02 05<br/>
+						<a href="mailto:contact@nature-et-web.fr">contact@nature-et-web.fr</a><br/>
+						<a href="index.html">www.nature-et-web.fr</a>
+		        	</div>
+		        </aside>
+		        <main>
+		        	<h2>Contact</h2>
+		        	<form action="traitement-formulaire.php" method="post">
+						
+						<div class="form-input required">
+							<label for="nom">Nom</label>
+							<input type="text" name="nom" id="nom" required="required" />
+						</div>
+
+						<div class="form-input">
+							<label for="prenom">Prénom</label>
+							<input type="text" name="prenom" id="prenom" />
+						</div>
+
+						<div class="form-input required">
+							<label for="mail">Email</label>
+							<input type="email" name="mail" id="mail" required="required" />
+						</div>
+
+						<div class="form-input">
+							<label for="adresse">Adresse</label>
+							<input type="text" name="adresse" id="adresse" />
+						</div>
+
+						<div class="form-input">
+							<label for="adresse_suite">Adresse (suite)</label>
+							<input type="text" name="adresse_suite" id="adresse
+							_suite" /></div>
+
+						<div class="form-input">
+							<label for="cp">Code postal</label>
+							<input type="text" name="cp" id="cp" />
+						</div>
+
+						<div class="form-input">
+							<label for="ville">Ville</label>
+							<input type="text" name="ville" id="ville" />
+						</div>
+						
+						<div class="form-input required">
+							<label for="message">Votre message</label>
+							<textarea name="message" id="message" cols="30" rows="10" required="required"></textarea>
+						</div>
+						<div class="form-input form-no-prelabel">
+							<input type="checkbox" name="news" id="news" checked="checked" />
+							<label class="label-reverse" for="news">Recevoir la newsletter</label>
+						</div>
+						<div class="form-submit form-no-prelabel">
+							<input type="submit" value="Envoyer le message" />
+						</div>
+	
+		        	</form>
+		        </main>
+	        </div>
+	        <footer>
+	        	<div class="footer-coordonnees">
+	        		<img src="img/logo-footer.png" alt="Logo Nature & web" class="logo">
+	        		<div class="coordonnees-content">
+	        			<div class="coordonnees-title">NATURE&WEB</div>
+	        			127, avenue des Champs<br/>
+	        			86000 POITIERS<br/>
+	        			Tél : 05 49 01 02 03
+	        		</div>
+	        	</div>
+	        	<div class="footer-credits">
+	        		Tous droits réservés NATURE&WEB
+	        	</div>
+	        </footer>
+    	</div>
+
+    </body>
+</html>
