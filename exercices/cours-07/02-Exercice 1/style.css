@@ -1,0 +1,15 @@
+.controls {
+	padding: 20px;
+	background-color: #000;
+}
+
+.element {
+	margin: 80px;
+	border: 1px solid #000;
+}
+
+#reset {
+	margin-left: 60px;
+	color: #fff;
+	background-color: #F00;
+}
