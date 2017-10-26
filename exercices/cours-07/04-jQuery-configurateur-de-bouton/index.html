@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Configurateur de bouton</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Configurateur de bouton</h1>
+
+        <h2>Configurez votre bouton</h2>
+
+        <div class="controls">
+            <button id="changePad">Change la marge</button>
+            <button id="changeSize">Change la taille</button>
+            <button id="changeBorder">Change la bordure</button>
+            <button id="changeColor">Change la couleur</button>
+            <button id="reset">Remettre à zero</button><br><br>
+
+            <form action="#">
+                <label for="btn-text">Texte du bouton :</label>
+                <input type="text" name="btn-text" id="btn-text" value="Click-me" />
+            </form>
+        </div>
+
+        <h2>Aperçu de votre bouton</h2>
+
+        <div class="configurateur">
+            <button class="button"></button>
+        </div>
+
+        <div class="code"><code></code></div>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

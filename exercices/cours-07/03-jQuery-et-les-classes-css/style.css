@@ -1,0 +1,29 @@
+body {
+	border: 20px solid green;
+
+	transition: border 2s, background 4s;
+}
+
+body.dark {
+	background-color: #000;
+	border: 60px solid blue;
+	color: #fff;
+}
+
+button {
+	margin: 20px;
+	padding: 10px;
+	border: 2px solid #076666;
+	background-color: #fff;
+	color: #076666;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	transition: all 0.3s;
+}
+
+button:hover {
+	background-color: #076666;
+	color: #fff;
+	padding: 10px 20px;
+}

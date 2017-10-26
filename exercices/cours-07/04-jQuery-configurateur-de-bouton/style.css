@@ -1,0 +1,147 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	font-family: sans-serif;
+}
+
+/* =============================================
+	Présentation : conteneurs et titres
+*/
+
+.configurateur {
+	margin: 0 2em;
+	padding: 2em;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	background-color: #ececec;
+}
+.code {
+	margin: 0 2em;
+	padding: 8px 16px;
+	background-color: #000;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;	
+	color: #fff;
+}
+
+.controls {
+	margin: 0 2rem;
+}
+
+h1 {
+	font-size: 22px;
+	background-color: #000;
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 4px;
+}
+h2 {
+	font-size: 18px;
+	margin-top: 2em;
+	margin-bottom: 8px;
+}
+
+/* =============================================
+	Différents états du bouton à configurer
+*/
+
+
+/* État initial */
+.button {
+	display: inline-block;
+	font-size: 16px;
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 0.25em;
+	color: #fff;
+	background-color: #44dd6c;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	transition: all 0.3s ease-out;
+}
+
+/* État avec marges gauche et droite augmentées */
+.button-pad {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+/* État arrondi */
+.button-round {
+	border-radius: 1em;
+}
+
+/* État agrandi */
+.button-large {
+	font-size: 20px;
+}
+
+/* État autre couleur */
+.button-color {
+	background-color: #4dd;
+}
+
+/* =============================================
+	Controleurs du configurateur
+*/
+
+/* Les boutons */
+.controls button {
+	margin: 5px;
+	border: 2px solid #34717b;
+	background-color: transparent;
+	border-radius: 4px;
+	font-weight: bold;
+	padding: 8px 16px;
+	color: #34717b;
+}
+.controls button:hover {
+	background-color: #34717b;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* Bouton reset en particulier */
+#reset {
+	border: 2px solid #9a2b35;
+	color: #9a2b35;
+}
+
+#reset:hover {
+	background-color: #9a2b35;
+	color: #fff;
+}
+
+/* Label du champ texte */
+label {
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #34717b;
+	color: #fff;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	font-size: 14px;
+	line-height: 36px;
+	height: 36px;
+	padding: 0 16px;
+}
+
+/* Label du champ texte */
+#btn-text {
+	display: inline-block;
+	vertical-align: middle;
+	margin: -4px;
+	text-align: center;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	font-size: 14px;
+	line-height: 36px;
+	height: 36px;
+	padding: 0 16px;
+	border: 2px solid #34717b;
+}
+
