@@ -1,0 +1,201 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: sans-serif;
+	background-color: #012033;
+}
+
+img {
+	vertical-align: bottom;
+	max-width: 100%; /* TADA !!! Les images responsives ! */
+}
+
+/* ------------------------------------------------------------------------
+Layout = positionnement des grands éléments
+------------------------------------------------------------------------ */
+
+.crop {
+	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	padding: 20px;
+	background-color: #fff;
+}
+
+
+/* ------------------------------------------------------------------------
+Grille
+------------------------------------------------------------------------ */
+
+.row {
+	margin-left: -10px;
+	margin-right: -10px;
+	font-size: 0;
+}
+
+.col {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1rem;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.col-4-12 {
+	width: 33.3333%;
+}
+.col-6-12 {
+	width: 50%;
+}
+.col-8-12 {
+	width: 66.6666%;
+}
+
+
+/* ------------------------------------------------------------------------
+Header
+------------------------------------------------------------------------ */
+
+header {
+	margin-top: 10px;
+	padding: 10px 20px;
+	color: #fff;
+	text-align: right;
+	overflow: auto;
+}
+
+.header-logo {
+	float: left;
+}
+.header-logo span {
+	color: #0092ed;
+}
+
+.header-logo h1 {
+	height: 40px;
+	margin: 0;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 40px;
+
+	transition: all 0.25s ease-out;
+}
+
+.header-nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.header-nav li {
+	list-style-type: none;
+	display: inline-block;
+}
+.header-nav li a {
+	display: block;
+	height: 40px;
+	padding: 0 35px;
+	font-size: 16px;
+	line-height: 40px;
+	text-decoration: none;
+	color: #fff;
+
+	transition: all 0.25s ease-out;
+}
+.header-nav li.active a,
+.header-nav li a:hover {
+	color: #0092ed;
+}
+.header-nav li.last a {
+	padding-right: 0;
+}
+
+/* ------------------------------------------------------------------------
+Site
+------------------------------------------------------------------------ */
+
+.diapo {
+	margin-bottom: 20px;
+}
+.diapo-item {
+	position: relative;
+}
+.legend {
+	position: absolute;
+	top: 60px;
+	left: 40px;
+	color: #fff;
+}
+.legend-title {
+	font-weight: bold;
+	font-size: 50px;
+}
+
+.card {
+	min-height: 290px;
+	padding: 20px;
+	color: #fff;
+	background-color: #0067ab;
+}
+
+
+.edito-content p:first-child {
+	margin-top: 0;
+}
+
+blockquote {
+	margin: 0;
+}
+
+
+.btn {
+	display: inline-block;
+	padding: 0 1em;
+	min-width: 140px;
+	height: 40px;
+	line-height: 40px;
+
+	/*-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;*/
+	border-radius: 4px;
+
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+
+	/*
+	background: -moz-linear-gradient(270deg, #39abed 0%, #39abed 49%, #008dde 50%, #008dde 100%); /* ff3.6+ /
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #39abed), color-stop(49%, #39abed), color-stop(50%, #008dde), color-stop(100%, #008dde)); /* safari4+,chrome /
+	background: -webkit-linear-gradient(270deg, #39abed 0%, #39abed 49%, #008dde 50%, #008dde 100%); /* safari5.1+,chrome10+ /
+	background: -o-linear-gradient(270deg, #39abed 0%, #39abed 49%, #008dde 50%, #008dde 100%); /* opera 11.10+ /
+	background: -ms-linear-gradient(270deg, #39abed 0%, #39abed 49%, #008dde 50%, #008dde 100%); /* ie10+ /
+	background: linear-gradient(180deg, #39abed 0%, #39abed 49%, #008dde 50%, #008dde 100%); /* w3c /
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39abed', endColorstr='#008dde',GradientType=0 ); /* ie6-9 */
+	*/
+
+	background-color: #39abed; /* pour assurer la rétro-compatibilité <IE10 */
+	background: #39abed linear-gradient(to bottom, #39abed 49%, #008dde 50%);
+}
+
+
+
+/* Gestion du diaporama */
+.slick-prev {
+	left: -55px;
+}
+.slick-next {
+	right: -55px;
+}
+
+
