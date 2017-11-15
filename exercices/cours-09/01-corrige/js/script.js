@@ -7,5 +7,7 @@ jQuery(document).ready(function($) {
 	});
 
 	// Réglages des hauteurs avec matchHeight
-	$('.card').matchHeight();
+	$('.card').matchHeight({
+		byRow: true,
+	});
 });

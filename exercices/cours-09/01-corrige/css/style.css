@@ -296,3 +296,25 @@ a:hover {
 
 
 
+/* Media-queries */
+
+@media screen and (max-width:950px) {
+	.header-nav li a {
+		padding: 0 15px;
+	}
+}
+
+@media screen and (max-width:760px) {
+	.header-nav ul {
+		display: none;
+	}
+	.col {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.legend-title {
+		font-size: 30px;
+	}
+}
+
+
