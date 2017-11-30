@@ -1,0 +1,26 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	width: 28px;
+	height: 28px;
+	border: 1px solid #000;
+}
+
+td.colored {
+	background-color: rgba(50,200,50, 0.2);
+}
+td.gameover {
+	background-color: rgba(200,50,50, 0.2);
+}
+
+td.player {
+	background-image: url(icon-user-black.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
