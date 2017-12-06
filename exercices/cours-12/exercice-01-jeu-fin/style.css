@@ -1,0 +1,48 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	width: 28px;
+	height: 28px;
+	border: 1px solid #000;
+}
+
+td.colored {
+	background-color: rgba(50,200,50, 0.2);
+}
+td.gameover {
+	background-color: rgba(200,50,50, 0.2);
+}
+
+td.player {
+	background-image: url(icon-user-black.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+
+.panel-gameover {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	/*
+	Pour les anciens navigateurs, on doit spécifier une taille
+	width: 200px;
+	height: 100px;
+	margin-left: -100px;
+	margin-top: -50px;*/
+
+	/* Pour les navigateurs récents, on utilise transform */
+	transform: translate3d(-50%,-50%,0);
+
+	background-color: #000;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
