@@ -1,0 +1,126 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #eee;
+}
+
+form {
+	width: 390px;
+	margin: 60px auto;
+}
+
+label {
+	display: inline-block;
+	vertical-align: top;
+	width: 120px;
+	font-size: 14px;
+	line-height: 40px;
+	color: #53a0ee;
+}
+
+input[type="text"], input[type="email"], textarea {
+	width: 240px;
+	padding: 0 13px;
+
+	border: 2px solid #53a0ee;
+	border-radius: 3px;
+	background-color: transparent;
+	font-family: 'Open Sans', sans-serif;
+	color: #53a0ee;
+	font-size: 14px;
+	outline: none;
+
+	transition: all 0.3s ease-out;
+}
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+	background-color: #fff;
+	border-left-width: 4px;
+}
+
+input[type="text"], input[type="email"], input[type="submit"] {
+	height: 40px;
+}
+
+input[type="submit"] {
+	background-color: #53a0ee;
+	color: #eee;
+	border: 0;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	padding: 0 13px;
+	outline: none;
+	cursor: pointer;
+
+	transition: all 0.3s ease-out;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+	background-color: #0c56a0;
+	padding: 0 26px;
+}
+
+input[type="checkbox"] {
+	position: absolute;
+	left: -9999px;
+}
+input[type="checkbox"] + label {
+	position: relative;
+}
+input[type="checkbox"] + label:before {
+	content:"";
+	position: relative;
+	top: 4px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #53a0ee;
+	border-radius: 3px;
+	background-color: transparent;
+	margin-right: 20px;
+	cursor: pointer;
+}
+input[type="checkbox"]:focus + label:before {
+	border: 2px solid #0c56a0;
+	background-color: #fff;
+}
+
+input[type="checkbox"] + label:after {
+	content: "";
+	position: absolute;
+	top: 13px;
+	left: 4px;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-color: #53a0ee;
+	border-radius: 3px;
+	transform: scale(0);
+	transition: transform 0.3s ease-out;
+}
+
+input[type="checkbox"]:checked + label:after {
+	transform: scale(1);
+}
+
+textarea {
+	height: 200px;
+	padding: 13px;
+}
+
+.form-line {
+	margin-bottom: 8px;
+}
+.move-left {
+	margin-left: 120px;
+}
+.move-left label {
+	width: auto;
+}
+
+.error {
+	color: #c00;
+	font-size: 12px;
+	margin-left: 124px;
+}
