@@ -1,0 +1,54 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+}
+
+.views {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 60px;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch; // Permettre l'inertie du scroll sur iOS
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 60px;
+
+	background-color: #4d4d4d;
+	color: #fff;
+}
+
+footer a {
+	display: block;
+	float: left;
+	width: 50%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+
+footer a:first-child {
+	border-right: 1px solid #fff;
+}
