@@ -1,0 +1,46 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+body > div {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.inbox-menu {
+	position: relative;
+	z-index: 1;
+	flex-basis: 230px;
+	flex-shrink: 0;
+	padding: 20px;
+	color: #fff;
+	background-color: #1d232a;
+	background-image: linear-gradient(to top left, #272f37, #1d2329);
+}
+
+.friends-list {
+	position: relative;
+	z-index: 2;
+	flex-basis: 360px;
+	flex-shrink: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,1);
+	background-color: #fff;
+}
+
+.chat {
+	position: relative;
+	z-index: 3;
+	flex-grow: 1;
+	background-color: #fff;
+}
