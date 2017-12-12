@@ -1,0 +1,47 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	/*flex-direction: row;
+	flex-wrap: wrap;*/
+	flex-flow: column wrap;
+	justify-content: flex-start; /* alignement des flex-items sur l'axe principal */
+	border: 2px solid #c00;
+	height: 400px;
+}
+
+.container > div {
+	/*flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 120px;*/
+	flex: 1 1 120px; /* flex-grow flex-shrink flex-basis : 0 1 auto */
+	background-color: #ccc;
+	border: 1px solid;
+	padding: 10px;
+	order: 2;
+}
+
+.container > div:nth-child(2) {
+	background: #0c0;
+	flex-shrink: 2;
+	order: 1;
+}
+
+
+
+.container2 {
+	display: flex;
+	justify-content: space-between;
+}
+.container2 > div {
+	background-color: #ccc;
+	border: 1px solid;
+	padding: 10px;
+}
+
+
+
+
+
