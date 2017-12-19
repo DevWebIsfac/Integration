@@ -1,0 +1,299 @@
+
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mémo jQuery</title>
+
+        <link media="screen, print" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CRoboto+Mono">
+        <link media="screen, print" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css">
+        <link media="screen, print" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link media="screen, print" rel="stylesheet" href="style.css">
+
+        <base href="https://devwebisfac.github.io/Integration/">
+    </head>
+    <body>
+    	<header class="header">
+        	<h1 class="header-title">Isfac - Développeur Logiciel 2017/2018</h1>
+        	<nav class="header-nav">
+        		<ul>
+        			<li><a href="https://devwebisfac.github.io/Integration/"><i class="fa fa-home"></i></a></li>
+        			<li><a href="https://devwebisfac.github.io/Integration/memo-html.html">HTML</a></li>
+        			<li><a href="https://devwebisfac.github.io/Integration/memo-css.html">CSS</a></li>
+        			<li class="active"><a href="https://devwebisfac.github.io/Integration/memo-jquery.html">jQuery</a></li>
+        		</ul>
+        	</nav>
+        </header>
+        <div class="container">
+<h1>Mémo jQuery</h1>
+
+<h2>Intégration de jQuery</h2>
+
+<p>Vous devez d'abord intégrer la librairie jQuery avant de pouvoir l'utiliser. Vous pouvez télécharger la librairie en local ou utiliser un CDN (Content Delivery Network) comme celui de Google</p>
+
+<pre><code class="html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Permier essai avec jQuery&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;-- 1. On charge la librairie jQuery --&gt;
+    &lt;script src="jquery.js"&gt;&lt;/script&gt;
+    &lt;-- 2. On peut l'utiliser dans notre fichier JavaScript --&gt;
+    &lt;script src="votre_fichier.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+<h2>Sélectionner des éléments</h2>
+
+<p>Pour utilisr la librairie jQuery, tout se passe avec la fonction jQuery() ou $().</p>
+<p>On lui passe comme premier argument une chaîne de caractère représentant un sélecteur CSS. Le sélecteur par ID sélectionne 1 ou 0 élément alors que les autres en sélectionne O, 1 ou plusieurs.</p>
+
+<pre><code class="js">// ici, on s'assure que le document est prêt
+$(document).ready(function($){
+
+  // Sélection par un ID
+  $('#titre');
+
+  // Sélection par une balise
+  $('h2');
+
+  // Sélection par une CLASS
+  $('.colonnes');
+
+  // Sélecteur multiple  : les liens et les Images
+  $('a, img');
+
+});
+</code></pre>
+
+Il existe de nombreux sélecteurs propres à jQuery : la liste est <a href="http://api.jquery.com/category/selectors/" target="_blank" rel="noreferrer">disponible dans la documentation</a>
+
+
+<h2>Les méthodes</h2>
+
+<p>Une fois que l'on a sélectionné un ou plusieurs éléments, on peut effectuer une multitude de choses grâce aux <strong>méthodes</strong> : changer le texte, la couleur, calculer la taille, ajouter une class, etc... Les méthodes sont des fonctions qui ne s'utilisent que sur des objets jQuery.</p>
+
+<h3>La méthode .html()</h3>
+
+<p>Sans paramètre, elle renvoie le contenu html et elle modifie le contenu si on lui passe une chaine de caractères.</p>
+
+<pre><code class="js">$('#titre'); // Sélectionne le titre et ne fait rien
+alert($('#titre').html()); // Affiche le contenu html du titre dans une boite d'alerte
+$('#titre').html('Mon nouveau titre'); // Change le titre par "Mon nouveau titre"
+</code></pre>
+
+<h3>Les méthodes .before() et .after()</h3>
+
+<p>Ces deux méthode permettent d'ajouter du contenu avant ou après la sélection</p>
+
+<pre><code class="js">// Ajoute un texte d'avertissement en dessous de chaque textarea
+$('textarea').after('&lt;p&gt;Veuillez ne pas poster de commentaire injurieux&lt;p&gt;');
+
+// Ajoute le mot "Titre" avant chaque titre
+$('.titre').before('Titre :');
+</code></pre>
+
+
+<h3>Chaînage des méthodes</h3>
+<p>Une méthode avec un argument ne renvoie pas d'information mais modifie l'élément et le retourne. Il est donc possible d'y appliquer une autre méthode sans devoir refaire de sélection.<br>Une méthode sans argument renvoie une valeur et ne peut donc être suivie d'une méthode<br>Les méthodes peuvent donc se chaîner mais la chaîne s'interrompt quand on appelle une méthode sans argument.</p>
+
+<pre><code class="js">// En une ligne, on ajoute du texte avant et après les liens
+$('.lien').before('Texte avant le lien :').after('Texte après le lien');
+
+// La dernière méthode .after() possède un argument, elle pourrait donc entre chaînée.
+// Par exemple en récupérant le contenu de l'élément
+$('#lien').before('Texte avant le lien :').after('Texte après le lien').html();
+// Impossible de chaîner une autre méthode après.</code>
+</pre>
+
+<h2>La variable length</h2>
+
+<pre><code class="js">// Connaitre le nombre de liens dans la page
+var nombreLiens = $('.liens').length;
+</code></pre>
+
+<h2>Manipuler du contenu</h2>
+
+<pre><code class="js">// Récupérer le code html du premier menu de la page.
+// La méthode eq() récupère le nième élément à partir de 0
+var code = $('.menu').eq(0).html();
+
+// Changer le contenu html de la page
+$('body').html('&lt;strong&gt;En maintenance&lt;/strong&gt;')
+
+// Récupère le contenu textuel du Titre
+$('#titre').text();
+
+// Change le contenu textuel du Titre
+$('#titre').text('Nouveau titre changé par jQuery');
+
+// Ajouter du contenu à l'existant : avant (à l'intérieur)
+$('#titre').prepend("Titre :");
+
+// Ajouter du contenu à l'existant : après (à l'intérieur)
+$('#titre').append(" !!!");
+
+// Ajouter du contenu à l'existant : avant (à l'extérieur)
+$('#titre').before("Titre :");
+
+// Ajouter du contenu à l'existant : après (à l'extérieur)
+$('#titre').after(" !!!");
+</code></pre>
+
+<p>Les méthodes <code>.append()</code> et <code>.prepend()</code> possèdent des fonctions inverses: <code>.appendTo()</code> et <code>.prependTo()</code> qui font la même chose mais dans le sens inverse. Idem pour <code>.before()</code> et <code>.after()</code> avec <code>.insertBefore()</code> et <code>.insertAfter()</code></p>
+<p>
+  <code>A.append(B) = B.appendTo(A)</code> et <code>A.prepend(B) = B.prependTo(A)</code>
+</p>
+<p>
+  <code>A.before(B) = B.insertBefore(A)</code> et <code>A.after(B) = B.insertAfter(A)</code>
+</p>
+
+
+<h2>Fonction anonyme et this</h2>
+
+De nombreuse méthodes prennent comme argument une fonction anonyme, comme la méthode <code>.click()</code> qui permet d'effectuer une action quand on clique sur l'élément sélectionné :
+
+<pre><code class="js">$('#titre').click(function(){
+  alert('Vous avez cliqué sur le titre');
+});</code></pre>
+
+Pour faire référence à l'élément sélectionné à l'intérieur de la fonction anonyme, il faut utiliser <code>$(this)</code>
+
+<pre><code class="js">$('#titre').click(function(){
+  alert('Vous avez cliqué sur le titre :' + $(this).text() );
+});</code></pre>
+
+<h2>Notion de Getter et Setter</h2>
+
+De nombreuses méthodes s'utilisent de 2 manières (comme html et text) :
+<ul>
+  <li>en getter (on récupère)</li>
+  <li>en setter (on définit)</li>
+</ul>
+
+<pre><code class="js">// On récupère le texte du titre (getter)
+$('#titre').text();
+
+// On définit le texte du titre (setter)
+$('#titre').text('Nouveau titre');</code></pre>
+
+<h2>Créer un élément</h2>
+
+<pre><code class="js">// Création d'un titre de niveau 2
+$('&lt;h2&gt;Voici un sous-titre&lt;/h2&gt;')</code></pre>
+
+<p>Le sous-titre n'existe pas dans la page web pour le moment, il faut l'ajouter avec une méthode vue précédemment. Par exemple en l'ajoutant après le h1</p>
+
+<pre><code class="js">$('&lt;h2&gt;Voici un sous-titre&lt;/h2&gt;').insertAfter('h1')</code></pre>
+
+<h2>Les attributs</h2>
+
+<h3>Récupérer un attribut (getter)</h3>
+<pre><code class="js">// Récupérer la cible du 4ème lien
+$('a').eq(3).attr('href');</code></pre>
+
+<h3>Modifier un attribut (setter)</h3>
+<pre><code class="js">// Modifier l'infobulle des liens
+$('a').attr('title','Cliquer pour en savoir plus');</code></pre>
+
+<h2>Les valeurs de formulaires</h2>
+
+<h3>Récupérer une valeur (getter)</h3>
+<pre><code class="js">$('#name')val();</code></pre>
+
+<h3>Modifier une valeur (setter)</h3>
+<pre><code class="js">$('#name').val('Jean');</code></pre>
+
+<h2>Les classes CSS</h2>
+
+<h3>Ajouter une classe</h3>
+<pre><code class="js">$('#form').addClass('error');</code></pre>
+
+<h3>Supprimer une classe</h3>
+<pre><code class="js">$('#form').removeClass('error');</code></pre>
+
+<h3>Tester l'existence d'une classe</h3>
+<pre><code class="js">// Renvoie true / false
+$('#form').hasClass('error');</code></pre>
+
+<h2>Style CSS</h2>
+
+Il est possible d'ajouter ou de modifier du code CSS en jQuery. Il faut bien comprendre que ce code est ajouté en inline gra^ce à un attribut style et donc prioritaire dans la cascade.
+
+<h3>Récupérer une valeur de propriété CSS (getter)</h3>
+<pre><code class="js">// Renvoie la taille du texte, par exemple '18px'
+$('#titre').css('font-size');</code></pre>
+
+<h3>Modifier une valeur de propriété CSS (setter)</h3>
+<pre><code class="js">$('#titre').css('font-size','14px');</code></pre>
+
+<h3>Modifier plusieurs valeurs (setter) au format JSON (à partir de la version 1.9)</h3>
+<pre><code class="js">// notation camelCase pour les propriétés
+$('body').css({
+  'color':'#fff',
+  'backgroundColor':'#333'
+});</code></pre>
+
+
+<h2>Boucler sur des éléments</h2>
+
+La méthode <code>.each()</code> permet d'itérer sur les éléments d'un objet jQuery. C'est comme une boucle <code>for</code> mais en plus simple
+
+<pre><code class="js">// On peut passer un argument représentant l'indice
+$('h2').each(function(i){
+  $(this).prepend('Titre n°'+i+' : ');
+});</code></pre>
+
+<h2>Évènements</h2>
+
+La librairie jQuery propose une syntaxe simplifiée pour écouter les évènements. Voici quelques exemples. La liste complète est <a href="https://api.jquery.com/category/events/" target="_blank" rel="noreferrer">disponible dans la documentation</a>
+
+<h3>Click</h3>
+
+<h4>Écouter l'évènement</h4>
+<pre><code class="js">$('#bt').click(function(e){
+  console.log('Vous avez cliquer sur le bouton');
+});</code></pre>
+
+
+<h4>Déclencher l'évènement (pour simuler le click avec du code)</h4>
+<pre><code class="js">$('#bt').click();</code></pre>
+
+<h3>Survol</h3>
+
+<h4>Écouter l'évènement</h4>
+<pre><code class="js">// Dans les fonctions anonymes, en passant l'évènement en paramètre on peut le récupérer avec $(e.currentTarget)
+$('#bt').hover(
+  function(e){
+    // Déclencher quand le curseur rentre sur l'élément
+    $(e.currentTarget).css('backgroundColor','red');
+  },
+  function(e){
+    // Déclencher quand le curseur sort de l'élément
+    $(e.currentTarget).css('backgroundColor','white');
+  }
+);</code></pre>
+
+
+<h2>Dimensions</h2>
+<h2>Ascenceurs</h2>
+scrollTop() et scrollLeft()
+<h2>Position</h2>
+absolue dans la page : offset().left et offset().top<br>
+relative dans son parent : position().left et position().top (attention : ne pas prends pas en compte les marges)
+<h2>Animation</h2>
+
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
