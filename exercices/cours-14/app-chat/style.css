@@ -19,6 +19,9 @@ body > div {
 	overflow-y: auto;
 }
 
+
+/* Template */
+
 .inbox-menu {
 	position: relative;
 	z-index: 1;
@@ -29,6 +32,26 @@ body > div {
 	background-color: #1d232a;
 	background-image: linear-gradient(to top left, #272f37, #1d2329);
 }
+
+.friends-list {
+	position: relative;
+	z-index: 2;
+	flex-basis: 360px;
+	flex-shrink: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,1);
+	color: #fff;
+	background-color: #494b4e;
+	background-image: linear-gradient(to top left, #242a31, #2d343c);
+}
+
+.chat {
+	position: relative;
+	z-index: 3;
+	flex-grow: 1;
+	background-color: #fff;
+}
+
+/* Inbox menu : partie de gauche */
 
 .inbox-menu header {
 	position: relative;
@@ -114,17 +137,6 @@ button .icon {
 	font-size: 11px;
 }
 
-.friends-list {
-	position: relative;
-	z-index: 2;
-	flex-basis: 360px;
-	flex-shrink: 0;
-	box-shadow: 0 0 10px rgba(0,0,0,1);
-	color: #fff;
-	background-color: #494b4e;
-	background-image: linear-gradient(to top left, #242a31, #2d343c);
-}
-
 /* Formulaire de recherche d'un contact */
 
 .friend-search {
@@ -163,11 +175,8 @@ button .icon {
 	cursor: pointer;
 }
 
-/* Chat */
-
-.chat {
-	position: relative;
-	z-index: 3;
-	flex-grow: 1;
-	background-color: #fff;
+/* Friend-list : zone centrale */
+.friends-list-messages-item {
+	padding: 25px 20px;
+	display: flex;
 }
