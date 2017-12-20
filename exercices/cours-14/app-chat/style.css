@@ -374,3 +374,39 @@ button .icon {
 	color: #fff;
 	background-color: #2b80ff;
 }
+
+.chat-form {
+	padding: 22px 26px;
+}
+
+.chat-form form {
+	display: flex;
+}
+
+.chat-form form textarea{
+	flex-grow: 1;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 300;
+	padding: 8px 0;
+	height: 38px;
+	border: none;
+	transition: height 300ms ease-out;
+}
+.chat-form form textarea.is-typing {
+	height: 120px;
+}
+
+.chat-form button {
+	background-color: #616d7a;
+	color: #fff;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+}
+.chat-form button:hover {
+	background-color: #2b80ff;
+}
