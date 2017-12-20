@@ -264,6 +264,7 @@ button .icon {
 .chat {
 	display: flex;
 	flex-direction: column;
+	overflow-y: hidden;
 }
 .chat-header {
 	display: flex;
@@ -307,5 +308,69 @@ button .icon {
 
 .chat-content {
 	flex-grow: 1;
+	padding: 26px;
 	border-bottom: 1px solid #dbe0e1;
+	background-color: #eeeff3;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.chat-msg {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.chat-msg-me {
+	flex-direction: row-reverse;
+}
+
+.chat-msg-avatar {
+	position: relative;
+	padding-right: 30px;
+}
+.chat-msg-me .chat-msg-avatar {
+	padding-right: 0;
+	padding-left: 30px;
+}
+.chat-msg-avatar img {
+	border-radius: 50%;
+}
+
+.chat-msg .time {
+	position: absolute;
+	width: 100%;
+	padding-right: 30px;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 500;
+	color: rgba(0,0,0,0.6);
+}
+
+.chat-msg-content {
+	position: relative;
+	padding: 16px 20px;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+	background-color: #fff;
+	border-radius: 3px;
+}
+.chat-msg-content:before {
+	position: absolute;
+	content:"";
+	left: -10px;
+	top: 22px;
+	border: 5px solid transparent;
+	border-right-color: #fff;
+}
+.chat-msg-me .chat-msg-content:before {
+	left: auto;
+	right: -10px;
+	border-right-color: transparent;
+	border-left-color: #2b80ff;
+}
+
+.chat-msg-me .chat-msg-content {
+	color: #fff;
+	background-color: #2b80ff;
 }
