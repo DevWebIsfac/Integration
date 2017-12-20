@@ -1,0 +1,173 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	margin: 0;
+	padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body > div {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.inbox-menu {
+	position: relative;
+	z-index: 1;
+	flex-basis: 230px;
+	flex-shrink: 0;
+	padding: 20px;
+	color: #fff;
+	background-color: #1d232a;
+	background-image: linear-gradient(to top left, #272f37, #1d2329);
+}
+
+.inbox-menu header {
+	position: relative;
+}
+
+.inbox-menu-title {
+	padding: 0 10px;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 35px;
+	margin-bottom: 50px;
+}
+
+button .icon {
+	font-size: 18px;
+	line-height: 1;
+}
+
+.add-contact-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #363c44;
+	border-radius: 50%;
+	color: #fff;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.add-contact-btn:hover {
+	border-color: #fff;
+}
+
+.inbox-menu nav ul,
+.inbox-menu nav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.inbox-menu nav a {
+	position: relative;
+	display: block;
+	padding: 12px 30px 12px 10px;
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 4px;
+	color: #a0a4a7;
+	text-decoration: none;
+	line-height: 17px;
+}
+
+.inbox-menu nav a:hover {
+	color: #fff;
+}
+
+.inbox-menu nav .active a {
+	background-color: #353d45;
+	color: #fff;
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.06);
+}
+
+.inbox-menu nav ul {
+	margin-top: 22px;
+	padding-top: 22px;
+	border-top: 1px solid #363c44;
+}
+.inbox-menu nav ul:first-child {
+	margin-top: 0;
+	border-top: none;
+	padding-top: 0;
+}
+
+.inbox-menu .list-number {
+	position: absolute;
+	right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 17px;
+	font-size: 11px;
+}
+
+.friends-list {
+	position: relative;
+	z-index: 2;
+	flex-basis: 360px;
+	flex-shrink: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,1);
+	color: #fff;
+	background-color: #494b4e;
+	background-image: linear-gradient(to top left, #242a31, #2d343c);
+}
+
+/* Formulaire de recherche d'un contact */
+
+.friend-search {
+	padding: 20px 25px;
+	border-bottom: 1px solid #3f444b;
+}
+
+.friend-search form {
+	position: relative;
+}
+
+.friend-search #searchFriend {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #363d45;
+	border: none;
+	border-radius: 20px;
+	padding-left: 50px;
+	color: #868b8e;
+	font-size: 14px;
+	font-weight: 500;
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.06);
+}
+
+.friend-search button {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+/* Chat */
+
+.chat {
+	position: relative;
+	z-index: 3;
+	flex-grow: 1;
+	background-color: #fff;
+}
