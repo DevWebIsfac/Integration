@@ -179,4 +179,37 @@ button .icon {
 .friends-list-messages-item {
 	padding: 25px 20px;
 	display: flex;
+	align-items: center;
+}
+
+.m-avatar img {
+	border-radius: 50%;
+}
+
+.m-infos {
+	padding: 0 18px;
+	flex-grow: 1;
+}
+.m-infos .name {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.m-infos .message {
+	width: 100%;
+	font-weight: 300;
+	font-size: 14px;
+	color: rgba(255,255,255,0.5);
+	white-space: nowrap;
+	max-width: 206px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 19px;
+}
+
+.m-metas-time {
+	font-weight: 500;
+	font-size: 11px;
+	color: rgba(255,255,255,0.2);
 }
