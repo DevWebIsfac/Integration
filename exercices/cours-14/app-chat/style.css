@@ -257,3 +257,55 @@ button .icon {
 	font-size: 11px;
 	color: rgba(255,255,255,0.2);
 }
+
+
+/* Chat */
+
+.chat {
+	display: flex;
+	flex-direction: column;
+}
+.chat-header {
+	display: flex;
+	border-bottom: 1px solid #dbe0e1;
+}
+
+.chat-header-friend-info {
+	flex-grow: 1;
+	padding: 20px 25px;
+	line-height: 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.chat-header-friend-actions {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.chat-header-friend-actions li {
+	list-style-type: none;
+}
+.chat-header-friend-actions button {
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	border: none;
+	border-left: 1px solid #dbe0e1;
+	background-color: transparent;
+	cursor: pointer;
+}
+.chat-header-friend-actions button:hover {
+	color: #2b80ff;
+}
+.chat-header-friend-actions button .icon {
+	font-size: 22px;
+}
+
+
+.chat-content {
+	flex-grow: 1;
+	border-bottom: 1px solid #dbe0e1;
+}
